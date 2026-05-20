@@ -366,7 +366,7 @@
         </div>
 
     </section>
-    <section class=" py-16 px-4">
+    <section class=" px-4">
     <div class="max-w-6xl mx-auto text-center">
         <h2 class="text-[48px] font-bold text-[#101828] mb-12">За кого е наменета?</h2>
         
@@ -465,7 +465,7 @@
     </div>
 </section>
 
-<section class="bg-[#F8FAFC] py-16 px-4">
+<section class="pt-5 px-4">
     <div class=" mx-auto">
         <div class="text-center mb-12">
             <span class="text-[15px] font-light tracking-widest text-[#5B52A3] uppercase block mb-3">Модули и програми</span>
@@ -576,7 +576,7 @@
     </div>
 </div>
 
-<div class="flex justify-center py-16 px-8">
+<div class="flex justify-center pt-16 px-8">
 <div class="bg-white rounded-2xl p-6 shadow-sm w-[1224.5px] h-[156px] text-center mb-16 relative overflow-hidden">
     <div class="absolute top-0 left-0 right-0 h-2.5 pointer-events-none" style="background: linear-gradient(to right, #5B52A3, #5BA3A1);"></div>
     <p class="text-[#101828] font-semibold text-[21px] px-5 leading-relaxed mt-2">
@@ -589,7 +589,7 @@
     <div class="">
 
 
-<div class="font-sans flex flex-col items-center ">
+<div class="font-sans flex flex-col items-center pt-5">
     <p class="text-[14px] text-[#7AB5A8] font-light">ПОВЕЌЕ ЗА КОИ СЕ SYNAPSEHP</p>
     <p class="font-semibold text-[40px] text-[#101828]">Нашиот тим</p>
     <p class="text-[20px] text-[#4A5565] font-light px-48 text-center">SynapseHR е колектив на докажани HR консултанти кои го здружуваат своето долгогодишно корпоративно искуство за да понудат системски, стратегиски и практични решенија.</p>
@@ -681,39 +681,40 @@
         </div>
 
         <div class="mr-20 lg:col-span-7 bg-white w-[508px] rounded-3xl p-8 shadow-xl border border-[#EEF2F6] ">
-            <form class="space-y-5">
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <form class="space-y-5" method="POST" action="{{ route('register.store') }}">
+                @csrf
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div>
                         <label class="block text-sm font-semibold text-[#475569] mb-1.5">Име и презиме</label>
-                        <input type="text" placeholder="Jane Doe" class="w-full bg-[#F8FAFC] border border-[#E2E8F0] rounded-xl px-4 py-3 text-sm outline-none focus:border-[#5B52A3] transition-colors">
+                        <input type="text" name="full_name" placeholder="Jane Doe" class="w-full bg-[#F8FAFC] border border-[#E2E8F0] rounded-xl px-4 py-3 text-sm outline-none focus:border-[#5B52A3] transition-colors">
                     </div>
                     <div>
                         <label class="block text-sm font-semibold text-[#475569] mb-1.5">Компанија</label>
-                        <input type="text" placeholder="Acme Corp" class="w-full bg-[#F8FAFC] border border-[#E2E8F0] rounded-xl px-4 py-3 text-sm outline-none focus:border-[#5B52A3] transition-colors">
+                        <input type="text" name="company" placeholder="Acme Corp" class="w-full bg-[#F8FAFC] border border-[#E2E8F0] rounded-xl px-4 py-3 text-sm outline-none focus:border-[#5B52A3] transition-colors">
                     </div>
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div>
                         <label class="block text-sm font-semibold text-[#475569] mb-1.5">Е-маил</label>
-                        <input type="email" placeholder="jane@acme.com" class="w-full bg-[#F8FAFC] border border-[#E2E8F0] rounded-xl px-4 py-3 text-sm outline-none focus:border-[#5B52A3] transition-colors">
+                        <input type="email" name="email" placeholder="jane@acme.com" class="w-full bg-[#F8FAFC] border border-[#E2E8F0] rounded-xl px-4 py-3 text-sm outline-none focus:border-[#5B52A3] transition-colors">
                     </div>
                     <div>
                         <label class="block text-sm font-semibold text-[#475569] mb-1.5">Телефон</label>
-                        <input type="text" placeholder="+389 7X XXX XXX" class="w-full bg-[#F8FAFC] border border-[#E2E8F0] rounded-xl px-4 py-3 text-sm outline-none focus:border-[#5B52A3] transition-colors">
+                        <input type="text" name="phone" placeholder="+389 7X XXX XXX" class="w-full bg-[#F8FAFC] border border-[#E2E8F0] rounded-xl px-4 py-3 text-sm outline-none focus:border-[#5B52A3] transition-colors">
                     </div>
                 </div>
 
                 <div>
                     <label class="block text-sm font-semibold text-[#475569] mb-1.5">Број на пријавени учесници</label>
-                    <input type="number" class="w-full bg-[#F8FAFC] border border-[#E2E8F0] rounded-xl px-4 py-3 text-sm outline-none focus:border-[#5B52A3] transition-colors">
+                    <input type="number" name="participants" class="w-full bg-[#F8FAFC] border border-[#E2E8F0] rounded-xl px-4 py-3 text-sm outline-none focus:border-[#5B52A3] transition-colors">
                 </div>
 
                 <button type="submit" class="w-full bg-[#5B52A3] hover:bg-[#4f4794] text-white font-light py-4 rounded-xl shadow-md transition-colors text-base mt-2">
                     Поднесете пријава
                 </button>
 
-                <p class="text-center text-[11px] text-[#94A3B8] leading-normal max-w-md mx-auto mt-4">
+                <p class="text-center text-[11px] text-[#94A3B8] font-light leading-normal max-w-md mx-auto mt-4">
                     Со поднесувањето на оваа форма се согласувате со нашата политика за приватност и условите за користење.
                 </p>
             </form>
