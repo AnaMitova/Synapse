@@ -32,3 +32,7 @@ Route::get('/admin/questions', function () {
 
     return view('admin.questions', compact('questions'));
 });
+
+Route::get('/academy', function () {
+    return view('academy');
+});
