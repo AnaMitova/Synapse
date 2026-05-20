@@ -29,33 +29,33 @@
             <p class="text-[#101828] font-bold text-[38px]">Стратегиски HR</p>
             <p class="text-[#4A5565] font-light text-[20px] pt-[23px]">Ги поврзуваме бизнис целите со HR практиките за создавање усогласени, стабилни и успешни тимови.</p>
         </div>
-        <div class="w-[360px] h-[280px] mt-7 flex flex-col gap-4 justify-between  shadow-[0_6px_16px_#5B52A34D] bg-white p-[36px] rounded-3xl">
+        <div class="w-[360px] h-[280px] mt-7 flex flex-col gap-4 justify-center  shadow-[0_6px_16px_#5B52A34D] bg-white p-[36px] rounded-3xl">
             <p class="text-[20px] font-semibold">Развој на вработени <br/>и кариера</p>
             <p class="text-[15px] font-light">Развиваме лидери и тимови преку практични програми, обуки и алатки што создаваат реален импакт.</p>
             <p class="text-[14px] font-semibold">Прочитај повеќе →</p>
         </div>
     </div>
     <div class="w-1/3 space-y-13 flex flex-col items-center">
-        <div class="w-[360px] h-[280px] flex flex-col gap-4 justify-between shadow-[0_6px_16px_#5B52A34D] bg-white p-[36px] rounded-3xl">
-            <p class="text-[20px] font-semibold">Развој на вработени <br/>и кариера</p>
-            <p class="text-[15px] font-light">Развиваме лидери и тимови преку практични програми, обуки и алатки што создаваат реален импакт.</p>
+        <div class="w-[360px] h-[280px] flex flex-col gap-4 justify-center shadow-[0_6px_16px_#5B52A34D] bg-white p-[36px] rounded-3xl">
+            <p class="text-[20px] font-semibold">Стратегиски HR и организациски развој</p>
+            <p class="text-[15px] font-light">Ги усогласуваме HR процесите со растот на компанијата преку современи стратегии, структури и системи.</p>
             <p class="text-[14px] font-semibold">Прочитај повеќе →</p>
         </div>
-        <div class="w-[360px] h-[280px] flex flex-col gap-4 justify-between shadow-[0_6px_16px_#5B52A34D] bg-white p-[36px] rounded-3xl">
-            <p class="text-[20px] font-semibold">Развој на вработени <br/>и кариера</p>
-            <p class="text-[15px] font-light">Развиваме лидери и тимови преку практични програми, обуки и алатки што создаваат реален импакт.</p>
+        <div class="w-[360px] h-[280px] flex flex-col gap-4 justify-center shadow-[0_6px_16px_#5B52A34D] bg-white p-[36px] rounded-3xl">
+            <p class="text-[20px] font-semibold">Менторство и обуки</p>
+            <p class="text-[15px] font-light">Обуки за менаџери, HR академии, менторство, развој на лидерски и HR компетенции, градење професионални заедници </p>
             <p class="text-[14px] font-semibold">Прочитај повеќе →</p>
         </div>
     </div>
     <div class="w-1/3 space-y-13 flex flex-col items-center">
-        <div class="w-[360px] h-[280px] flex flex-col gap-4 justify-between shadow-[0_6px_16px_#5B52A34D] bg-white p-[36px] rounded-3xl">
-            <p class="text-[20px] font-semibold">Развој на вработени <br/>и кариера</p>
-            <p class="text-[15px] font-light">Развиваме лидери и тимови преку практични програми, обуки и алатки што создаваат реален импакт.</p>
+        <div class="w-[360px] h-[280px] flex flex-col gap-4 justify-center shadow-[0_6px_16px_#5B52A34D] bg-white p-[36px] rounded-3xl">
+            <p class="text-[20px] font-semibold">Менаџирање со перформанси</p>
+            <p class="text-[15px] font-light">Поставување и каскадирање на цели, оценка на учинок, KPI и фидбек</p>
             <p class="text-[14px] font-semibold">Прочитај повеќе →</p>
         </div>
-        <div class="w-[360px] h-[280px] flex flex-col gap-4 justify-between shadow-[0_6px_16px_#5B52A34D] bg-white p-[36px] rounded-3xl">
-            <p class="text-[20px] font-semibold">Развој на вработени <br/>и кариера</p>
-            <p class="text-[15px] font-light">Развиваме лидери и тимови преку практични програми, обуки и алатки што создаваат реален импакт.</p>
+        <div class="w-[360px] h-[280px] flex flex-col gap-4 justify-center shadow-[0_6px_16px_#5B52A34D] bg-white p-[36px] rounded-3xl">
+            <p class="text-[20px] font-semibold">HR решенија по мерка</p>
+            <p class="text-[15px] font-light">Преку анализа, заедничко дефинирање на приоритети и дизајн создаваме фокусирани и применливи решенија</p>
             <p class="text-[14px] font-semibold">Прочитај повеќе →</p>
         </div>
     </div>
@@ -67,32 +67,32 @@
     <p class="text-[48px] font-bold ">Зошто SynapseHR?</p>
     <div class="flex space-x-8 pt-7">
         <div class="w-[350.328125px] h-[300px] flex flex-col  justify-between shadow-[0_8px_16px_#7AB5A866] bg-white py-[43px] px-[36px] rounded-2xl">
-            <div class="w-14 h-14 flex items-center justify-center bg-gray-200 rounded-full">
-                <i class="fa-solid fa-magnifying-glass text-gray-700"></i>
+            <div class="w-14 h-14 flex items-center justify-center border-2 border-[#E5E7EB] bg-[#eeedf6] rounded-full">
+                <i class="fa-solid fa-magnifying-glass text-[#5B52A3]"></i>
             </div>            
             <p class="text-[20px] pt-3 font-semibold">Практичен пристап</p>
             <p class="text-[15px] pt-6 font-light">Нудиме решенија што можат веднаш да се применат во секојдневното работење.</p>
         </div>
         <div class="w-[350.328125px] h-[300px] flex flex-col  justify-between shadow-[0_8px_16px_#7AB5A866] bg-white py-[43px] px-[36px] rounded-2xl">
-            <div class="w-14 h-14 flex items-center justify-center bg-gray-200 rounded-full">
-                <i class="fa-solid fa-magnifying-glass text-gray-700"></i>
+            <div class="w-14 h-14 flex items-center border-2 border-[#E5E7EB] justify-center bg-[#f2f7f6] rounded-full">
+                <i class="fa-regular fa-lightbulb text-[#7AB5A8] text-[20px] "></i>
             </div>            
-            <p class="text-[20px] pt-3 font-semibold">Практичен пристап</p>
-            <p class="text-[15px] pt-6 font-light">Нудиме решенија што можат веднаш да се применат во секојдневното работење.</p>
+            <p class="text-[20px] pt-3 font-semibold">Искуство и експертиза</p>
+            <p class="text-[15px] pt-6 font-light">Нашиот тим комбинира HR знаење, бизнис разбирање и практично искуство од различни индустрии.</p>
         </div>
         <div class="w-[350.328125px] h-[300px] flex flex-col  justify-between shadow-[0_8px_16px_#7AB5A866] bg-white py-[43px] px-[36px] rounded-2xl">
-            <div class="w-14 h-14 flex items-center justify-center bg-gray-200 rounded-full">
-                <i class="fa-solid fa-magnifying-glass text-gray-700"></i>
+            <div class="w-14 h-14 flex items-center border-2 border-[#E5E7EB] justify-center bg-[#eeedf6] rounded-full">
+                <i class="fa-solid fa-wrench text-[20px] text-[#5B52A3]"></i>
             </div>            
-            <p class="text-[20px] pt-3 font-semibold">Практичен пристап</p>
-            <p class="text-[15px] pt-6 font-light">Нудиме решенија што можат веднаш да се применат во секојдневното работење.</p>
+            <p class="text-[20px] pt-3 font-semibold">Прилагодени решенија</p>
+            <p class="text-[15px] pt-6 font-light">Секоја организација е различна, затоа креираме пристап според вашите цели и потреби.</p>
         </div>
     </div>
 </div>
 <div class="px-12 px-6 pt-14">
     <div class="px-12 py-11 bg-gradient-to-r font-sans font-light from-[#5B52A3] to-[#7AB5A8] text-white p-6 rounded-3xl flex flex-col gap-2">
         <div class="absolute right-35  w-[64px] h-[64px]  flex items-center justify-center bg-[#FFFFFF33] rounded-full">
-            <i class="fa-solid fa-magnifying-glass text-white"></i>
+            <i class="fa-solid fa-user-group text-[22px]"></i>        
         </div>  
         <p class="text-[30px]">Компании од различни индустрии нѝ веруваат</p>
         <p class="text-[16px] w-[90%]">кога треба да изградат јасна структура, функционални процеси и организациска култура што поддржува стабилен и одржлив раст, без разлика дали се работи за конкретен предизвик или поширока трансформација, ние ја избираме и вклучуваме најсоодветната експертиза од нашиот тим и мрежа на партнери.</p>

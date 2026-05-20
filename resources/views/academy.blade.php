@@ -5,7 +5,7 @@
 <div class="bg-[#F5F7F7] min-h-screen font-sans">
 
     <!-- HERO SECTION -->
-    <section class="max-w-7xl mx-auto px-6 lg:px-8 pt-16 pb-12">
+    <section class="max-w-7xl mx-auto px-6 lg:px-8 lg:pl-7 pt-16 pb-12">
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
 
@@ -33,12 +33,12 @@
                 </div>
 
                 <div class="pt-8">
-                    <h3 class="text-[20px] lg:text-[22px] font-bold text-black leading-[1.4]">
+                    <h3 class="text-[20px] lg:text-[24px] font-bold text-black leading-[1.4]">
                         Практично лидерство<br>
                         што се применува веднаш
                     </h3>
 
-                    <p class="text-[#4A5565] text-[18px] lg:text-[20px] leading-[1.8] pt-6 max-w-xl">
+                    <p class="text-[#4A5565] font-light text-[18px] lg:text-[20px] leading-[1.8] pt-6 max-w-xl">
                         Структурирана 5-месечна програма со 7 модули,
                         наменета за менаџери кои водат тимови во
                         производствени и корпоративни средини.
@@ -47,11 +47,11 @@
 
                 <div class="flex flex-wrap gap-4 pt-10">
                     <a href="#"
-                       class="bg-[#5B52A3] hover:bg-[#4f4794] transition-all text-white px-8 py-4 rounded-2xl text-[18px] lg:text-[20px] font-semibold shadow-lg">
+                       class="bg-[#5B52A3] hover:bg-[#4f4794] transition-all text-white px-8 py-4 rounded-2xl text-[18px] lg:text-[20px] shadow-lg">
                         Пријави се →
                     </a>
                     <a href="#"
-                       class="border border-[#D0D5DD] bg-white px-8 py-4 rounded-2xl text-[18px] lg:text-[20px] text-[#344054] font-semibold shadow-sm">
+                       class="border border-[#D0D5DD] bg-white px-8 py-4 rounded-2xl text-[18px] lg:text-[20px] text-[#344054]  shadow-sm">
                         Погледни ги модулите
                     </a>
                 </div>
@@ -63,19 +63,27 @@
  
     <div class="relative w-full max-w-[569px]">
  
-        <img src="{{ asset('img/academyLanding.png') }}"
-             class="rounded-2xl object-cover w-full h-[320px] sm:h-[408px]"
-             alt="Academy" />
+<div class="relative">
+    <img src="{{ asset('img/academyLanding.png') }}"
+         class="rounded-2xl object-cover w-full h-[320px] sm:h-[408px]"
+         alt="Academy" />
 
-        <div class="absolute inset-0 rounded-2xl pointer-events-none"
-             style="background: linear-gradient(135deg, rgba(91, 163, 161, 0.5) 0%, rgba(91, 82, 163, 0.6) 100%);">
-        </div>
+    <!-- Top gradient -->
+    <div class="absolute top-0 left-0 w-full h-24 rounded-t-2xl pointer-events-none"
+         style="background: linear-gradient(to bottom, rgba(91, 163, 161, 0.6), transparent);">
+    </div>
+
+    <!-- Bottom gradient -->
+    <div class="absolute bottom-0 left-0 w-full h-24 rounded-b-2xl pointer-events-none"
+         style="background: linear-gradient(to top, rgba(91, 82, 163, 0.6), transparent);">
+    </div>
+</div>
  
         <div class="absolute bg-white rounded-[28px] shadow-2xl flex flex-col bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 lg:left-auto lg:right-6 lg:translate-x-0"
              style="
                 width: calc(100% - 32px);
                 max-width: 340px;
-                height: 370px;
+                height: 390px;
                 padding: 24px 24px 20px;
              ">
  
@@ -83,7 +91,7 @@
                 Брза пријава
             </h3>
  
-            <div class="flex flex-col flex-1" style="gap: 8px;">
+            <div class="flex flex-col flex-1" style="gap: 14px;">
  
                 <input type="text"
                        placeholder="Име и презиме"
@@ -105,7 +113,7 @@
                        class="w-full rounded-2xl border border-[#E5E7EB] bg-[#F9FAFB] px-4 text-[15px] outline-none focus:border-[#5B52A3] transition-colors shrink-0"
                        style="height: 46px;" />
  
-                <button class="w-full rounded-2xl bg-[#5B52A3] hover:bg-[#4f4794] transition-colors text-white text-[17px] font-semibold shrink-0"
+                <button class="w-full rounded-2xl bg-[#5B52A3] hover:bg-[#4f4794] transition-colors text-white text-[15px] shrink-0"
                         style="height: 48px; margin-top: 4px;">
                     Испрати пријава
                 </button>
@@ -121,13 +129,13 @@
 
     <!-- CARDS SECTION -->
     <!-- top padding accounts for the form card overflow (130px overlap + 32px gap) -->
-    <section class="max-w-7xl mx-auto px-6 lg:px-8 pt-52 lg:pt-56">
+    <section class="max-w-7xl mx-auto px-6 lg:px-8 pt-52 lg:pt-12">
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-7">
 
             <!-- CARD 1 -->
-            <div class="bg-white rounded-[28px] p-8 shadow-md flex flex-col"
-                 style="min-height: 300px;">
+            <div class="bg-white rounded-[28px] px-7 py-8 shadow-md flex flex-col"
+                 style="min-height: 280px;">
 
                 <div class="w-[72px] h-[72px] rounded-[22px] bg-[#F4F1FF] flex items-center justify-center mb-7 shrink-0">
                     <!-- target / bullseye icon -->
@@ -138,19 +146,19 @@
                     </svg>
                 </div>
 
-                <h3 class="text-[22px] font-bold text-[#101828] leading-[1.3]">
+                <h3 class="text-[22px]  text-[#101828] leading-[1.3]">
                     Практични и<br>применливи<br>вештини
                 </h3>
 
-                <p class="text-[#4A5565] text-[16px] leading-[1.7] pt-4">
+                <p class="text-[#4A5565] text-[18px] leading-[1.7] pt-4">
                     Стратегиски вештини кои можете да ги примените на вашето работно место веднаш
                 </p>
 
             </div>
 
             <!-- CARD 2 -->
-            <div class="bg-white rounded-[28px] p-8 shadow-md flex flex-col"
-                 style="min-height: 300px;">
+            <div class="bg-white rounded-[28px] px-7 py-8 shadow-md flex flex-col"
+                 style="min-height: 280px;">
 
                 <div class="w-[72px] h-[72px] rounded-[22px] bg-[#EEF8F5] flex items-center justify-center mb-7 shrink-0">
                     <!-- calendar icon -->
@@ -161,19 +169,19 @@
                     </svg>
                 </div>
 
-                <h3 class="text-[22px] font-bold text-[#101828] leading-[1.3]">
+                <h3 class="text-[22px]  text-[#101828] leading-[1.3]">
                     7 еднодневни<br>модули
                 </h3>
 
-                <p class="text-[#4A5565] text-[16px] leading-[1.7] pt-4">
+                <p class="text-[#4A5565] text-[18px] leading-[1.7] pt-12">
                     Сеопфатна програма во тек на 5 месеци со континуирана поддршка
                 </p>
 
             </div>
 
             <!-- CARD 3 -->
-            <div class="bg-white rounded-[28px] p-8 shadow-md flex flex-col"
-                 style="min-height: 300px;">
+            <div class="bg-white rounded-[28px] px-7 py-8 shadow-md flex flex-col"
+                 style="min-height: 280px;">
 
                 <div class="w-[72px] h-[72px] rounded-[22px] bg-[#F4F1FF] flex items-center justify-center mb-7 shrink-0">
                     <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -183,19 +191,19 @@
                     </svg>
                 </div>
 
-                <h3 class="text-[22px] font-bold text-[#101828] leading-[1.3]">
+                <h3 class="text-[22px]  text-[#101828] leading-[1.3]">
                     Искусни<br>предавачи
                 </h3>
 
-                <p class="text-[#4A5565] text-[16px] leading-[1.7] pt-4">
+                <p class="text-[#4A5565] text-[18px] leading-[1.7] pt-12">
                     Учете од докажани HR консултанти, практичари и бизнис лидери
                 </p>
 
             </div>
 
             <!-- CARD 4 -->
-            <div class="bg-white rounded-[28px] p-8 shadow-md flex flex-col"
-                 style="min-height: 300px;">
+            <div class="bg-white rounded-[28px] px-7 py-8 shadow-md flex flex-col "
+                 style="min-height: 280px;">
 
                 <div class="w-[72px] h-[72px] rounded-[22px] bg-[#EEF8F5] flex items-center justify-center mb-7 shrink-0">
                     <!-- arrow up-right icon -->
@@ -204,11 +212,11 @@
                     </svg>
                 </div>
 
-                <h3 class="text-[22px] font-bold text-[#101828] leading-[1.3]">
+                <h3 class="text-[22px]  text-[#101828] leading-[1.3]">
                     Идеално за<br>сите нивоа
                 </h3>
 
-                <p class="text-[#4A5565] text-[16px] leading-[1.7] pt-4">
+                <p class="text-[#4A5565] text-[18px] leading-[1.7] pt-12">
                     Наменето за менаџери од сите нивоа кои управуваат со луѓе и тимови
                 </p>
 
@@ -221,11 +229,11 @@
     <!-- WHY SECTION -->
     <section class="max-w-5xl mx-auto text-center pt-28 px-6 lg:px-8">
 
-        <h2 class="text-[42px] md:text-[58px] lg:text-[72px] font-extrabold text-[#101828] leading-[1.1]">
+        <h2 class="text-[42px] md:text-[52px] font-semibold text-[#101828] leading-[1.1]">
             Зошто ви е потребна SPM?
         </h2>
 
-        <p class="text-[20px] lg:text-[22px] text-[#4A5565] leading-[1.7] pt-6 max-w-2xl mx-auto">
+        <p class="text-[20px] lg:text-[19px] font-light text-[#4A5565] leading-[1.7] pt-3 max-w-xl mx-auto">
             Ако вашите менаџери водат луѓе а немале стручна обука за тоа
             оваа школа е создадена точно за нив
         </p>
@@ -233,58 +241,74 @@
     </section>
 
     <!-- PROBLEM CARDS -->
-    <section class="max-w-5xl mx-auto px-6 lg:px-8 pt-14">
+<section class="max-w-6xl mx-auto px-6 lg:px-8 pt-14">
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
 
-            <div class="bg-white rounded-[28px] shadow-md p-10 text-center">
-
-                <div class="w-[80px] h-[80px] bg-[#F4F5F7] rounded-full mx-auto flex items-center justify-center mb-8">
-                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="18" cy="18" r="16" stroke="#4A5565" stroke-width="3"/>
-                        <path d="M18 10v10" stroke="#4A5565" stroke-width="3" stroke-linecap="round"/>
-                        <circle cx="18" cy="26" r="1.5" fill="#4A5565"/>
-                    </svg>
-                </div>
-
-                <h3 class="text-[34px] lg:text-[38px] font-bold text-[#101828]">
-                    Унапреден, но необучен
-                </h3>
-
-                <p class="text-[#4A5565] text-[18px] lg:text-[20px] leading-[1.7] pt-5">
-                    Одличните стручњаци стануваат менаџери, но им недостасува да научат:
-                    како правилно да делегираат, како да дадат конструктивна повратна
-                    информација, како да управуваат со низок учинок и како да водат
-                    тешки разговори со луѓето
-                </p>
-
+        <!-- Card 1 -->
+<div class="bg-white rounded-[32px]
+            shadow-[0_6px_24px_rgba(0,0,0,0.08)]
+             w-[530px]
+            h-[350px]
+            px-10 py-6 text-center">
+            <div class="w-[70px] h-[70px] bg-[#F3F4F6] rounded-full mx-auto flex items-center justify-center mb-10">
+                <svg width="28" height="28" viewBox="0 0 36 36" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="18" cy="18" r="16" stroke="#4A5565" stroke-width="3"/>
+                    <path d="M18 10v10" stroke="#4A5565" stroke-width="3" stroke-linecap="round"/>
+                    <circle cx="18" cy="26" r="1.5" fill="#4A5565"/>
+                </svg>
             </div>
 
-            <div class="bg-white rounded-[28px] shadow-md p-10 text-center">
+            <h3 class="text-[28px] lg:text-[24px] font-semibold text-[#111827] leading-tight">
+                Унапреден, но необучен
+            </h3>
 
-                <div class="w-[80px] h-[80px] bg-[#FFF1F1] rounded-full mx-auto flex items-center justify-center mb-8">
-                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M18 4L33 30H3L18 4Z" stroke="#EF4444" stroke-width="3" stroke-linejoin="round"/>
-                        <path d="M18 14v8" stroke="#EF4444" stroke-width="3" stroke-linecap="round"/>
-                        <circle cx="18" cy="26" r="1.5" fill="#EF4444"/>
-                    </svg>
-                </div>
-
-                <h3 class="text-[34px] lg:text-[38px] font-bold text-[#101828]">
-                    Последица
-                </h3>
-
-                <p class="text-[#4A5565] text-[18px] lg:text-[20px] leading-[1.7] pt-5">
-                    Преоптоварени менаџери. Демотивирани тимови.
-                    Висока флуктуација и постојани HR интервенции
-                    за решавање конфликти.
-                </p>
-
-            </div>
+            <p class="max-w-[520px] mx-auto text-gray-700 font-light text-[16px] leading-[1.65] pt-6">
+                Одличните стручњаци стануваат менаџери, но им недостасува да научат:
+                како правилно да делегираат, како да дадат конструктивна повратна
+                информација, како да управуваат со низок учинок и како да водат
+                тешки разговори со луѓето
+            </p>
 
         </div>
 
-    </section>
+        <!-- Card 2 -->
+<div class="bg-white rounded-[32px]
+            shadow-[0_6px_24px_rgba(0,0,0,0.08)]
+             w-[530px]
+            h-[350px]
+            px-10 py-6 text-center">
+            <div class="w-[70px] h-[70px] bg-[#FFF1F1] rounded-full mx-auto flex items-center justify-center mb-10">
+                <svg width="28" height="28" viewBox="0 0 36 36" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 4L33 30H3L18 4Z"
+                          stroke="#EF4444"
+                          stroke-width="3"
+                          stroke-linejoin="round"/>
+                    <path d="M18 14v8"
+                          stroke="#EF4444"
+                          stroke-width="3"
+                          stroke-linecap="round"/>
+                    <circle cx="18" cy="26" r="1.5" fill="#EF4444"/>
+                </svg>
+            </div>
+
+            <h3 class="text-[28px] lg:text-[24px] font-semibold text-[#111827] leading-tight">
+                Последица
+            </h3>
+
+            <p class="max-w-[520px] mx-auto text-gray-700 font-light text-[16px] leading-[1.65] pt-6">
+                Преоптоварени менаџери. Демотивирани тимови.
+                Висока флуктуација и постојани HR интервенции
+                за решавање конфликти.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
 
     <!-- BANNER -->
     <section class="max-w-7xl mx-auto px-6 lg:px-8 pt-12">
