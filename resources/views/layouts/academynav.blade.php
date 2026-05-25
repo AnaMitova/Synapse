@@ -12,9 +12,9 @@
 <body class="bg-[#F5F6F7]" style="font-family: 'Inter', sans-serif;">
     <!-- HEADER (shared on every page) -->
     <header class="bg-white flex font-light justify-center items-center px-16 py-3 rounded-b-[50px] shadow-sm shadow-gray-300">
-        <div class="w-[25%]">
+        <a href="/home" class="w-[25%]">
             <img class="w-48" src="{{ asset('img/logo.png') }}">
-        </div>
+        </a>
         <div class="flex items-center w-[75%] text-[16px] text-[#364153] justify-end gap-12">
             <a href="/home">Почетна</a>
             <a>Што е SPM?</a>
