@@ -891,16 +891,17 @@
         </div>
 
         <div class="bg-white w-full max-w-xl mx-auto lg:mx-0 lg:ml-auto rounded-3xl p-6 sm:p-8 shadow-xl border border-[#EEF2F6]">
-            <form class="space-y-5">
+            <form action="{{ route('applications.store') }}" method="POST" class="space-y-5">
+                @csrf
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div>
                         <label class="block text-sm font-semibold text-[#475569] mb-1.5">Име и презиме</label>
-                        <input type="text" placeholder="Jane Doe"
+                        <input name="full_name" type="text" placeholder="Jane Doe"
                             class="w-full bg-[#F8FAFC] border border-[#E2E8F0] rounded-xl px-4 py-3 text-sm outline-none focus:border-[#5B52A3] transition-colors">
                     </div>
                     <div>
                         <label class="block text-sm font-semibold text-[#475569] mb-1.5">Компанија</label>
-                        <input type="text" placeholder="Acme Corp"
+                        <input name="company" type="text" placeholder="Acme Corp"
                             class="w-full bg-[#F8FAFC] border border-[#E2E8F0] rounded-xl px-4 py-3 text-sm outline-none focus:border-[#5B52A3] transition-colors">
                     </div>
                 </div>
@@ -908,19 +909,19 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div>
                         <label class="block text-sm font-semibold text-[#475569] mb-1.5">Е-маил</label>
-                        <input type="email" placeholder="jane@acme.com"
+                        <input name="email" type="email" placeholder="jane@acme.com"
                             class="w-full bg-[#F8FAFC] border border-[#E2E8F0] rounded-xl px-4 py-3 text-sm outline-none focus:border-[#5B52A3] transition-colors">
                     </div>
                     <div>
                         <label class="block text-sm font-semibold text-[#475569] mb-1.5">Телефон</label>
-                        <input type="text" placeholder="+389 7X XXX XXX"
+                        <input name="phone" type="text" placeholder="+389 7X XXX XXX"
                             class="w-full bg-[#F8FAFC] border border-[#E2E8F0] rounded-xl px-4 py-3 text-sm outline-none focus:border-[#5B52A3] transition-colors">
                     </div>
                 </div>
 
                 <div>
                     <label class="block text-sm font-semibold text-[#475569] mb-1.5">Број на пријавени учесници</label>
-                    <input type="number"
+                    <input name="participants" type="number"
                         class="w-full bg-[#F8FAFC] border border-[#E2E8F0] rounded-xl px-4 py-3 text-sm outline-none focus:border-[#5B52A3] transition-colors">
                 </div>
 
