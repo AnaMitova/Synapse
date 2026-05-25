@@ -5,20 +5,15 @@ use App\Http\Controllers\ContactController;
 use App\Models\Contact;
 use App\Http\Controllers\QuestionController;
 use App\Models\Question;
-use App\Http\Controllers\RegistrationController;
-use App\Models\Registration;
 
-    
 
 Route::post('/academy', [ContactController::class, 'store'])->name('academy.store');
 
 Route::get('/admin/contacts', function () {
     $contacts = Contact::latest()->get();
     $questions = Question::latest()->get();
-    $registered = Registration::latest()->get();
 
-
-    return view('admin.contacts', compact('contacts', 'questions', 'registered'));
+    return view('admin.contacts', compact('contacts', 'questions'));
 });
 
 Route::get('/home', function () {
@@ -39,6 +34,4 @@ Route::get('/academy', function () {
     return view('academy');
 });
 
-
-Route::post('/register', [RegistrationController::class, 'store'])->name('register.store');
 

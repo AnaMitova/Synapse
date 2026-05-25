@@ -461,37 +461,8 @@
             </div>
         </section>
 
-
-            <div class="relative bg-white rounded-[28px] shadow-md p-10 pl-[2.5rem] overflow-hidden">
-            
-                <!-- gradient border -->
-                <div class="absolute left-0 top-0 h-full w-[8px]
-                            bg-gradient-to-b from-[#7AB5A8] to-[#5B52A3]
-                            rounded-l-[28px]">
-                </div>
-            
-                <h3 class="text-[36px] lg:text-[30px] font-bold text-[#101828]">
-                    ШТО ДОБИВААТ УЧЕСНИЦИТЕ?
-                </h3>
-            
-                <ol class="text-[#4A5565] text-[18px] lg:text-[18px] leading-[1.8] font-light pt-6 list-decimal pl-6 space-y-1">
-                    <li>Јасност на улогата за менаџирање со луѓе</li>
-                    <li>Конкретни алатки што веднаш се применуваат</li>
-                    <li>Подобра комуникација и зајакнат авторитет</li>
-                    <li>Системски пристап кон перформанс менаџмент</li>
-                    <li>Самостојност во водење на тим без постојано потпирање на одделот за Човечки ресурси</li>
-                    <li>Менторство</li>
-                </ol>
-            
-            </div>
-
-        </div>
-
-    </section>
-    <section class=" px-4">
-    <div class="max-w-6xl mx-auto text-center">
-        <h2 class="text-[48px] font-bold text-[#101828] mb-12">За кого е наменета?</h2>
->>>>>>> 1d66dcbd2c54683b8607ca518d4fddc5e16e8ff0
+       <section class="py-16 px-4 md:px-8 lg:px-28">
+    <div class="max-w-7xl mx-auto">
         
         <span class="text-sm md:text-[18px] font-light tracking-wider text-[#5B52A3] uppercase block mb-3">SPM 2026</span>
         
@@ -543,185 +514,6 @@
                 </svg>
             </button>
         </div>
-
-    </div>
-</section>
-
-<section class="pt-5 px-4">
-    <div class=" mx-auto">
-        <div class="text-center mb-12">
-            <span class="text-[15px] font-light tracking-widest text-[#5B52A3] uppercase block mb-3">Модули и програми</span>
-            <h2 class="text-[48px] font-black text-[#101828] leading-tight mb-4">
-                Структурирано учење.<br>
-                <span class="text-[#5B52A3]">Реална примена.</span> <span class="text-[#101828]">Видливи резултати</span>
-            </h2>
-            
-            <div class="flex flex-wrap items-center justify-center gap-6 mt-6 text-[#64748B] text-[15px] font-light">
-                <span class="flex items-center gap-2"><svg class="w-4 h-4 text-[#5B52A3]" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg> 5 месеци</span>
-                <span class="flex items-center gap-2"><svg class="w-4 h-4 text-[#5BA3A1]" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg> 7 еднодневни модули</span>
-                <span class="flex items-center gap-2"><svg class="w-4 h-4 text-[#5B52A3]" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg> 16-18 учесници</span>
-            </div>
-        </div>
-
-        <div class="space-y-9 mb-8 px-20 ">
-            <div class="relative bg-white rounded-2xl p-6 shadow-sm flex items-start gap-6 pl-8 overflow-hidden">
-            
-                <!-- gradient border -->
-                <div class="absolute left-0 top-0 h-full w-[12px]
-                            bg-gradient-to-b from-[#7AB5A8] to-[#5B52A3]"></div>                <span class="text-5xl font-bold text-[#7AB5A8]  leading-none">01</span>
-                <div class="flex-1">
-                    <h4 class="text-2xl font-semibold text-[#101828] mb-1">Од експерт до менаџер</h4>
-                    <p class="text-[#64748B] text-[17px] font-light mb-3">Транзиција од „јас работам“ кон „јас водам“.</p>
-                    <a href="#" class="inline-flex items-center gap-1.5 text-[20px] font-medium text-[#101828] hover:underline">Прочитај повеќе <span class="text-sm">→</span></a>
-                </div>
-            </div>
-
-
-            <div class="relative bg-white rounded-2xl p-6 shadow-sm flex items-start gap-6 pl-8 overflow-hidden">
-                <!-- gradient border -->
-                <div class="absolute left-0 top-0 h-full w-[12px]
-                            bg-gradient-to-b from-[#5B52A3] to-[#5BA3A1]"></div>                <span class="text-5xl font-bold text-[#5B52A3]  leading-none">02</span>
-                <div class="flex-1">
-                    <h4 class="text-2xl font-semibold text-[#101828] mb-1">Организациско однесување и комуникација</h4>
-                    <p class="text-[#64748B] text-[17px] font-light mb-3">Како да изградите авторитет и доверба.</p>
-                    <a href="#" class="inline-flex items-center gap-1.5 text-[20px] font-medium text-[#101828] hover:underline">Прочитај повеќе <span class="text-sm">→</span></a>
-                </div>
-            </div>
-
-            <div class="relative bg-white rounded-2xl p-6 shadow-sm flex items-start gap-6 pl-8 overflow-hidden">
-                <!-- gradient border -->
-                <div class="absolute left-0 top-0 h-full w-[12px]
-                            bg-gradient-to-b from-[#5BA3A1] to-[#5B52A3]"></div>                <span class="text-5xl font-bold text-[#5BA3A1]  leading-none">03</span>
-                <div class="flex-1">
-                    <h4 class="text-2xl font-semibold text-[#101828] mb-1">Ангажираност и задржување на вработените</h4>
-                    <p class="text-[#64748B] text-[17px] font-light mb-3">Како се гради посветен тим што останува.</p>
-                    <a href="#" class="inline-flex items-center gap-1.5 text-[20px] font-medium text-[#101828] hover:underline">Прочитај повеќе <span class="text-sm">→</span></a>
-                </div>
-            </div>
-
-            <div class="relative bg-white rounded-2xl p-6 shadow-sm flex items-start gap-6 pl-8 overflow-hidden">
-                <!-- gradient border -->
-                <div class="absolute left-0 top-0 h-full w-[12px]
-                            bg-gradient-to-b from-[#5B52A3] to-[#5BA3A1]"></div>                <span class="text-5xl font-bold text-[#5B52A3]  leading-none">04</span>
-                <div class="flex-1">
-                    <h4 class="text-2xl font-semibold text-[#101828] mb-1">Управување со перформанси и одговорност</h4>
-                    <p class="text-[#64748B] text-[17px] font-light mb-3">Продуктивност и одговорност или Како да ги преведете целите во резултати</p>
-                    <a href="#" class="inline-flex items-center gap-1.5 text-[20px] font-medium text-[#101828] hover:underline">Прочитај повеќе <span class="text-sm">→</span></a>
-                </div>
-            </div>
-
-            <div class="relative bg-white rounded-2xl p-6 shadow-sm flex items-start gap-6 pl-8 overflow-hidden">
-                <!-- gradient border -->
-                <div class="absolute left-0 top-0 h-full w-[12px]
-                            bg-gradient-to-b from-[#5BA3A1] to-[#5B52A3]"></div>                <span class="text-5xl font-bold text-[#5BA3A1]  leading-none">05</span>
-                <div class="flex-1">
-                    <h4 class="text-2xl font-semibold text-[#101828] mb-1">Развој на вработени, таленти и наследници</h4>
-                    <p class="text-[#64748B] text-[17px] font-light mb-3">Како да градите луѓе, не само резултати.</p>
-                    <a href="#" class="inline-flex items-center gap-1.5 text-[20px] font-medium text-[#101828] hover:underline">Прочитај повеќе <span class="text-sm">→</span></a>
-                </div>
-            </div>
-
-            <div class="relative bg-white rounded-2xl p-6 shadow-sm flex items-start gap-6 pl-8 overflow-hidden">
-                <!-- gradient border -->
-                <div class="absolute left-0 top-0 h-full w-[12px]
-                            bg-gradient-to-b from-[#5B52A3] to-[#5BA3A1]"></div>                <span class="text-5xl font-bold text-[#5B52A3]  leading-none">06</span>
-                <div class="flex-1">
-                    <h4 class="text-2xl font-semibold text-[#101828] mb-1">Емоционална интелигенција и управување со конфликти</h4>
-                    <p class="text-[#64748B] text-[17px] font-light mb-3">Лидерство во тешки ситуации.</p>
-                    <a href="#" class="inline-flex items-center gap-1.5 text-[20px] font-medium text-[#101828] hover:underline">Прочитај повеќе <span class="text-sm">→</span></a>
-                </div>
-            </div>
-
-            <div class="relative bg-white rounded-2xl p-6 shadow-sm flex items-start gap-6 pl-8 overflow-hidden">
-                <!-- gradient border -->
-                <div class="absolute left-0 top-0 h-full w-[12px]
-                            bg-gradient-to-b from-[#5BA3A1] to-[#5B52A3]"></div>                <span class="text-5xl font-bold text-[#5BA3A1]  leading-none">07</span>
-                <div class="flex-1">
-                    <h4 class="text-2xl font-semibold text-[#101828] mb-1">Управување со промени и отпорност</h4>
-                    <p class="text-[#64748B] text-[17px] font-light mb-3">Како да водите тим низ промени.</p>
-                    <a href="#" class="inline-flex items-center gap-1.5 text-[20px] font-medium text-[#101828] hover:underline">Прочитај повеќе <span class="text-sm">→</span></a>
-                </div>
-            </div>
-        </div>
-
-
-    </div>
-</section>
-
-<div class="flex justify-center">
-    <div class="rounded-3xl w-[1224.5px] px-8 py-16 text-center text-white relative overflow-hidden shadow-lg min-h-[160px] flex flex-col items-center justify-center" style="background: linear-gradient(135deg, #5B52A3 0%, #5BA3A1 100%);">
-        <div class="mb-3">
-            <svg class="w-8 h-8 text-white mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 18.75h-9m9 0a3 3 0 013 3h-15a3 3 0 013-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-6.75a1.125 1.125 0 00-1.125 1.125v3.375m9 0h-9M9 10.5h.008v.008H9V10.5zm3 0h.008v.008H12V10.5zm3 0h.008v.008H15V10.5zM9 13.5h.008v.008H9V13.5zm3 0h.008v.008H12V13.5zm3 0h.008v.008H15V13.5zM7.5 6.75h9M7.5 3h9M9 3h6m-7.5 15h9"/></svg>
-        </div>
-        <h3 class="text-[29px] font-medium mb-1">Сертификат за завршена програма</h3>
-        <p class="text-white/80 text-[17px] font-light w-3xl">Уверение за вашите лидерски способности и посветеност на професионален развој.</p>
-    </div>
-</div>
-
-<div class="flex justify-center pt-16 px-8">
-<div class="bg-white rounded-2xl p-6 shadow-sm w-[1224.5px] h-[156px] text-center mb-16 relative overflow-hidden">
-    <div class="absolute top-0 left-0 right-0 h-2.5 pointer-events-none" style="background: linear-gradient(to right, #5B52A3, #5BA3A1);"></div>
-    <p class="text-[#101828] font-semibold text-[21px] px-5 leading-relaxed mt-2">
-Првата програма на Школата за менаџирање со луѓе е специјално дизајнирана за потребите на менаџментот, тим лидери и супервизори кои управуваат со луѓе во производство, а применлива е за производствени компании од сите индустрии.</p>
-</div>    
-</div>
-
-
-<section class=" px-8">
-    <div class="">
-
-
-<div class="font-sans flex flex-col items-center pt-5">
-    <p class="text-[14px] text-[#7AB5A8] font-light">ПОВЕЌЕ ЗА КОИ СЕ SYNAPSEHP</p>
-    <p class="font-semibold text-[40px] text-[#101828]">Нашиот тим</p>
-    <p class="text-[20px] text-[#4A5565] font-light px-48 text-center">SynapseHR е колектив на докажани HR консултанти кои го здружуваат своето долгогодишно корпоративно искуство за да понудат системски, стратегиски и практични решенија.</p>
-    <div class="pt-10 flex space-x-8 justify-center">
-        <div class="w-[285px] h-[580px] bg-white rounded-2xl shadow-[0_6px_16px_#7AB5A866]">
-            <img class="w-full" src="{{ asset('img/tomida.png') }}" />
-            <div class="p-7 flex flex-col gap-2">
-                <p class="text-[18px] font-semibold">Томида Караиванова Алаѓозовска</p>
-                <p class="text-[16px] text-[#5B52A3] font-light">Експерт за стратегиско управување со човечки ресурси и HR системи</p>
-                <a class="text-[16px] font-light pb-7">Прочитај повеќе →</a>
-            </div>
-
-        </div>
-        <div class="w-[285px] h-[580px] bg-white rounded-2xl shadow-[0_6px_16px_#7AB5A866]">
-            <img class="w-full" src="{{ asset('img/tomida.png') }}" />
-            <div class="p-7 flex flex-col gap-2">
-                <p class="text-[18px] font-semibold">Томида Караиванова Алаѓозовска</p>
-                <p class="text-[16px] text-[#5B52A3] font-light">Експерт за стратегиско управување со човечки ресурси и HR системи</p>
-                <a class="text-[16px] font-light pb-7">Прочитај повеќе →</a>
-            </div>
-
-        </div>
-        <div class="w-[285px] h-[580px] bg-white rounded-2xl shadow-[0_6px_16px_#7AB5A866]">
-            <img class="w-full" src="{{ asset('img/tomida.png') }}" />
-            <div class="p-7 flex flex-col gap-2">
-                <p class="text-[18px] font-semibold">Томида Караиванова Алаѓозовска</p>
-                <p class="text-[16px] text-[#5B52A3] font-light">Експерт за стратегиско управување со човечки ресурси и HR системи</p>
-                <a class="text-[16px] font-light pb-7">Прочитај повеќе →</a>
-            </div>
-
-        </div>
-        <div class="w-[285px] h-[580px] bg-white rounded-2xl shadow-[0_6px_16px_#7AB5A866]">
-            <img class="w-full" src="{{ asset('img/tomida.png') }}" />
-            <div class="p-7 flex flex-col gap-2">
-                <p class="text-[18px] font-semibold">Томида Караиванова Алаѓозовска</p>
-                <p class="text-[16px] text-[#5B52A3] font-light">Експерт за стратегиско управување со човечки ресурси и HR системи</p>
-                <a class="text-[16px] font-light pb-7">Прочитај повеќе →</a>
-            </div>
-        </div>
-    </div>
-    <p class="text-[#4A5565] text-[20px] px-64 pt-10 font-light text-center">Ова не е само академска теорија пренесена од учебник. Ова е знаење изградено низ реални менаџерски предизвици, трансформации, раст на компании и работа со тимови во комплексни организациски системи, како и бројни консултантски часови.</p>
-</div>
-
-
-    </div>
-</section>
-
-<section class=" py-16 px-4">
-    <div class="flex justify-between ">
->>>>>>> 1d66dcbd2c54683b8607ca518d4fddc5e16e8ff0
         
     </div>
 </section>
@@ -1098,40 +890,38 @@
             </div>
         </div>
 
-
-        <div class="mr-20 lg:col-span-7 bg-white w-[508px] rounded-3xl p-8 shadow-xl border border-[#EEF2F6] ">
-            <form class="space-y-5" method="POST" action="{{ route('register.store') }}">
-                @csrf
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+        <div class="bg-white w-full max-w-xl mx-auto lg:mx-0 lg:ml-auto rounded-3xl p-6 sm:p-8 shadow-xl border border-[#EEF2F6]">
+            <form class="space-y-5">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div>
                         <label class="block text-sm font-semibold text-[#475569] mb-1.5">Име и презиме</label>
-                        <input type="text" name="full_name" placeholder="Jane Doe" class="w-full bg-[#F8FAFC] border border-[#E2E8F0] rounded-xl px-4 py-3 text-sm outline-none focus:border-[#5B52A3] transition-colors">
+                        <input type="text" placeholder="Jane Doe"
+                            class="w-full bg-[#F8FAFC] border border-[#E2E8F0] rounded-xl px-4 py-3 text-sm outline-none focus:border-[#5B52A3] transition-colors">
                     </div>
                     <div>
                         <label class="block text-sm font-semibold text-[#475569] mb-1.5">Компанија</label>
-                        <input type="text" name="company" placeholder="Acme Corp" class="w-full bg-[#F8FAFC] border border-[#E2E8F0] rounded-xl px-4 py-3 text-sm outline-none focus:border-[#5B52A3] transition-colors">
->>>>>>> 1d66dcbd2c54683b8607ca518d4fddc5e16e8ff0
+                        <input type="text" placeholder="Acme Corp"
+                            class="w-full bg-[#F8FAFC] border border-[#E2E8F0] rounded-xl px-4 py-3 text-sm outline-none focus:border-[#5B52A3] transition-colors">
                     </div>
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div>
                         <label class="block text-sm font-semibold text-[#475569] mb-1.5">Е-маил</label>
-
-                        <input type="email" name="email" placeholder="jane@acme.com" class="w-full bg-[#F8FAFC] border border-[#E2E8F0] rounded-xl px-4 py-3 text-sm outline-none focus:border-[#5B52A3] transition-colors">
+                        <input type="email" placeholder="jane@acme.com"
+                            class="w-full bg-[#F8FAFC] border border-[#E2E8F0] rounded-xl px-4 py-3 text-sm outline-none focus:border-[#5B52A3] transition-colors">
                     </div>
                     <div>
                         <label class="block text-sm font-semibold text-[#475569] mb-1.5">Телефон</label>
-                        <input type="text" name="phone" placeholder="+389 7X XXX XXX" class="w-full bg-[#F8FAFC] border border-[#E2E8F0] rounded-xl px-4 py-3 text-sm outline-none focus:border-[#5B52A3] transition-colors">
->>>>>>> 1d66dcbd2c54683b8607ca518d4fddc5e16e8ff0
+                        <input type="text" placeholder="+389 7X XXX XXX"
+                            class="w-full bg-[#F8FAFC] border border-[#E2E8F0] rounded-xl px-4 py-3 text-sm outline-none focus:border-[#5B52A3] transition-colors">
                     </div>
                 </div>
 
                 <div>
                     <label class="block text-sm font-semibold text-[#475569] mb-1.5">Број на пријавени учесници</label>
-
-                    <input type="number" name="participants" class="w-full bg-[#F8FAFC] border border-[#E2E8F0] rounded-xl px-4 py-3 text-sm outline-none focus:border-[#5B52A3] transition-colors">
->>>>>>> 1d66dcbd2c54683b8607ca518d4fddc5e16e8ff0
+                    <input type="number"
+                        class="w-full bg-[#F8FAFC] border border-[#E2E8F0] rounded-xl px-4 py-3 text-sm outline-none focus:border-[#5B52A3] transition-colors">
                 </div>
 
                 <button type="submit"
@@ -1139,7 +929,7 @@
                     Поднесете пријава
                 </button>
 
-                <p class="text-center text-[11px] text-[#94A3B8] font-light leading-normal max-w-md mx-auto mt-4">
+                <p class="text-center text-[11px] text-[#94A3B8] leading-normal max-w-md mx-auto mt-4">
                     Со поднесувањето на оваа форма се согласувате со нашата политика за приватност и условите за користење.
                 </p>
             </form>
