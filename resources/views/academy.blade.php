@@ -50,8 +50,9 @@
                             class="bg-[#5B52A3] hover:bg-[#4f4794] transition-all text-white px-8 py-4 rounded-2xl text-[18px] lg:text-[20px] shadow-lg">
                             Пријави се →
                         </a>
-                        <a href="#"
-                            class="border border-[#D0D5DD] bg-white px-8 py-4 rounded-2xl text-[18px] lg:text-[20px] text-[#344054]  shadow-sm">
+                        <a href="#modules-section"
+                            onclick="event.preventDefault(); document.getElementById('modules-section').scrollIntoView({ behavior: 'smooth' });"
+                            class="border border-[#D0D5DD] bg-white px-8 py-4 rounded-2xl text-[18px] lg:text-[20px] text-[#344054] shadow-sm">
                             Погледни ги модулите
                         </a>
                     </div>
@@ -518,7 +519,7 @@
     </div>
 </section>
 
-        <section class="bg-[#F8FAFC] py-16 px-4" x-data="{
+        <section id="modules-section" class="bg-[#F8FAFC] py-16 px-4" x-data="{
             openModal: false,
             activeNum: '',
             activeTitle: '',
@@ -762,83 +763,148 @@
         <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
 
-        <section class="px-4 py-16 md:px-8">
-            <div class="max-w-7xl mx-auto">
+        <section class="px-4 py-16 md:px-8 relative" x-data="{
+    openTeamModal: false,
+    activeMember: {},
+    team: {
+        '01': {
+            num: '01',
+            name: 'Томида Караиванова Алаѓозовска',
+            role: 'Експерт за стратегиско управување со човечки ресурси и HR системи',
+            desc: 'Експерт за стратегиско управување со човечки ресурси и HR системи, со 20 години искуство во FMCG, производство, телекомуникации, хотелиерство, авио индустрија, градежништво. Работела како корпоративен HR директор на ниво на повеќе држави, со фокус на усогласување на бизнисот и луѓето преку јасни структури, процеси и одлуки. Томида е Стратешки HR консултант и основач на Evolvia.',
+            companyBtn: 'Evolvia &rarr;'
+        },
+        '02': {
+            num: '02',
+            name: 'Ана Костовска',
+            role: 'Организациски психолог и експерт за развој на луѓе и системи',
+            desc: 'Организациски психолог со 17+ години искуство во различни индустрии и организациски контексти (телеком, малопродажба, производство). Работи на развој на луѓе и системи, поврзувајќи психологија и менаџмент пракса за создавање стабилни тимови и одржливи резултати. Ана е основач на CSD SONIK, им помага на луѓето и организациите да се развиваат со јасна цел и самодоверба.',
+            companyBtn: 'CSD SONIK &rarr;'
+        },
+        '03': {
+            num: '03',
+            name: 'Ивана Дојчиновска Стојановиќ',
+            role: 'Експерт за организациски дизајн, HR системи и кариерен развој',
+            desc: 'Експерт за организациски дизајн, HR системи и кариерен развој, со над 20 години искуство во банкарство и производни системи. Работела на лидерски HR позиции во меѓународни компании, а денес поддржува организации и поединци во развој, трансформација и кариерен раст. Ивана е основач на Prudens Consulting, која со јасен и практичен пристап ги претвора комплексните предизвици во структурирани, одржливи решенија.',
+            companyBtn: 'Prudens Consulting &rarr;'
+        },
+        '04': {
+            num: '04',
+            name: 'Искра Конеска',
+            role: 'HR лидер специјализирана во HRIS, перформанси и организациски развој',
+            desc: 'HR лидер со над 20 годишно искуство, специјализирана во HRIS, перформанси и организациски развој. Работела во IT, FMCG и автомобилска индустрија, активно поттикнува иновации и раст на современи HR професионалци. Искра со практичен и иновативен пристап гради системи што го поддржуваат развојот на луѓето, организациската култура и лидерството.',
+            companyBtn: '' 
+        }
+    },
+    openMember(id) {
+        this.activeMember = this.team[id];
+        this.openTeamModal = true;
+    }
+}">
 
-                <div class="font-sans flex flex-col items-center">
+    <div class="max-w-7xl mx-auto">
+        <div class="font-sans flex flex-col items-center">
 
-                    <p class="text-sm text-[#7AB5A8] font-light uppercase tracking-wider mb-2">ПОВЕЌЕ ЗА КОИ СЕ SYNAPSEHP
-                    </p>
-                    <p class="font-semibold text-3xl md:text-5xl text-[#101828] mb-6 text-center">Нашиот тим</p>
+            <p class="text-sm text-[#7AB5A8] font-light uppercase tracking-wider mb-2">ПОВЕЌЕ ЗА КОИ СЕ SYNAPSEHR</p>
+            <p class="font-semibold text-3xl md:text-5xl text-[#101828] mb-6 text-center">Нашиот тим</p>
+            <p class="text-base md:text-xl text-[#4A5565] font-light max-w-4xl text-center mb-12">
+                SynapseHR е колектив на докажани HR консултанти кои го здружуваат своето долгогодишно корпоративно
+                искуство за да понудат системски, стратегиски и практични решенија.
+            </p>
 
-                    <p class="text-base md:text-xl text-[#4A5565] font-light max-w-4xl text-center mb-12">
-                        SynapseHR е колектив на докажани HR консултанти кои го здружуваат своето долгогодишно корпоративно
-                        искуство за да понудат системски, стратегиски и практични решенија.
-                    </p>
-
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
-
-                        <div class="bg-white rounded-2xl shadow-[0_6px_16px_#7AB5A866] flex flex-col overflow-hidden">
-                            <img class="w-full h-auto object-cover" src="{{ asset('img/tomida.png') }}" alt="Томида" />
-                            <div class="p-6 flex flex-col flex-grow">
-                                <p class="text-lg font-semibold mb-2">Томида Караиванова Алаѓозовска</p>
-                                <p class="text-base text-[#5B52A3] font-light mb-6 flex-grow">Експерт за стратегиско
-                                    управување со човечки ресурси и HR системи</p>
-                                <a href="#"
-                                    class="text-base font-light text-[#101828] hover:text-[#7AB5A8] transition-colors mt-auto inline-flex items-center gap-1">Прочитај
-                                    повеќе →</a>
-                            </div>
-                        </div>
-
-                        <div class="bg-white rounded-2xl shadow-[0_6px_16px_#7AB5A866] flex flex-col overflow-hidden">
-                            <img class="w-full h-auto object-cover" src="{{ asset('img/tomida.png') }}" alt="Томида" />
-                            <div class="p-6 flex flex-col flex-grow">
-                                <p class="text-lg font-semibold mb-2">Томида Караиванова Алаѓозовска</p>
-                                <p class="text-base text-[#5B52A3] font-light mb-6 flex-grow">Експерт за стратегиско
-                                    управување со човечки ресурси и HR системи</p>
-                                <a href="#"
-                                    class="text-base font-light text-[#101828] hover:text-[#7AB5A8] transition-colors mt-auto inline-flex items-center gap-1">Прочитај
-                                    повеќе →</a>
-                            </div>
-                        </div>
-
-                        <div class="bg-white rounded-2xl shadow-[0_6px_16px_#7AB5A866] flex flex-col overflow-hidden">
-                            <img class="w-full h-auto object-cover" src="{{ asset('img/tomida.png') }}" alt="Томида" />
-                            <div class="p-6 flex flex-col flex-grow">
-                                <p class="text-lg font-semibold mb-2">Томида Караиванова Алаѓозовска</p>
-                                <p class="text-base text-[#5B52A3] font-light mb-6 flex-grow">Експерт за стратегиско
-                                    управување со човечки ресурси и HR системи</p>
-                                <a href="#"
-                                    class="text-base font-light text-[#101828] hover:text-[#7AB5A8] transition-colors mt-auto inline-flex items-center gap-1">Прочитај
-                                    повеќе →</a>
-                            </div>
-                        </div>
-
-                        <div class="bg-white rounded-2xl shadow-[0_6px_16px_#7AB5A866] flex flex-col overflow-hidden">
-                            <img class="w-full h-auto object-cover" src="{{ asset('img/tomida.png') }}" alt="Томида" />
-                            <div class="p-6 flex flex-col flex-grow">
-                                <p class="text-lg font-semibold mb-2">Томида Караиванова Алаѓозовска</p>
-                                <p class="text-base text-[#5B52A3] font-light mb-6 flex-grow">Експерт за стратегиско
-                                    управување со човечки ресурси и HR системи</p>
-                                <a href="#"
-                                    class="text-base font-light text-[#101828] hover:text-[#7AB5A8] transition-colors mt-auto inline-flex items-center gap-1">Прочитај
-                                    повеќе →</a>
-                            </div>
-                        </div>
-
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
+                
+                <div class="bg-white rounded-2xl shadow-[0_6px_16px_#7AB5A866] flex flex-col overflow-hidden">
+                    <img class="w-full h-auto object-cover" src="{{ asset('img/tomida.png') }}" alt="Томида" />
+                    <div class="p-6 flex flex-col flex-grow">
+                        <p class="text-lg font-semibold mb-2">Томида Караиванова Алаѓозовска</p>
+                        <p class="text-base text-[#5B52A3] font-light mb-6 flex-grow">Експерт за стратегиско управување со човечки ресурси и HR системи</p>
+                        <button @click="openMember('01')" class="text-left text-base font-light text-[#101828] hover:text-[#7AB5A8] transition-colors mt-auto inline-flex items-center gap-1">Прочитај повеќе →</button>
                     </div>
+                </div>
 
-                    <p class="text-[#4A5565] text-base md:text-xl max-w-5xl mt-16 font-light text-center">
-                        Ова не е само академска теорија пренесена од учебник. Ова е знаење изградено низ реални менаџерски
-                        предизвици, трансформации, раст на компании и работа со тимови во комплексни организациски системи,
-                        како и бројни консултантски часови.
-                    </p>
+                <div class="bg-white rounded-2xl shadow-[0_6px_16px_#7AB5A866] flex flex-col overflow-hidden">
+                    <img class="w-full h-auto object-cover" src="{{ asset('img/ana.png') }}" alt="Ана" />
+                    <div class="p-6 flex flex-col flex-grow">
+                        <p class="text-lg font-semibold mb-2">Ана Костовска</p>
+                        <p class="text-base text-[#5B52A3] font-light mb-6 flex-grow">Организациски психолог и експерт за развој на луѓе и системи</p>
+                        <button @click="openMember('02')" class="text-left text-base font-light text-[#101828] hover:text-[#7AB5A8] transition-colors mt-auto inline-flex items-center gap-1">Прочитај повеќе →</button>
+                    </div>
+                </div>
 
+                <div class="bg-white rounded-2xl shadow-[0_6px_16px_#7AB5A866] flex flex-col overflow-hidden">
+                    <img class="w-full h-auto object-cover" src="{{ asset('img/ivana.png') }}" alt="Ивана" />
+                    <div class="p-6 flex flex-col flex-grow">
+                        <p class="text-lg font-semibold mb-2">Ивана Дојчиновска Стојановиќ</p>
+                        <p class="text-base text-[#5B52A3] font-light mb-6 flex-grow">Експерт за организациски дизајн, HR системи и кариерен развој</p>
+                        <button @click="openMember('03')" class="text-left text-base font-light text-[#101828] hover:text-[#7AB5A8] transition-colors mt-auto inline-flex items-center gap-1">Прочитај повеќе →</button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-[0_6px_16px_#7AB5A866] flex flex-col overflow-hidden">
+                    <img class="w-full h-auto object-cover" src="{{ asset('img/iskra.png') }}" alt="Искра" />
+                    <div class="p-6 flex flex-col flex-grow">
+                        <p class="text-lg font-semibold mb-2">Искра Конеска</p>
+                        <p class="text-base text-[#5B52A3] font-light mb-6 flex-grow">HR лидер специјализирана во HRIS, перформанси и организациски развој</p>
+                        <button @click="openMember('04')" class="text-left text-base font-light text-[#101828] hover:text-[#7AB5A8] transition-colors mt-auto inline-flex items-center gap-1">Прочитај повеќе →</button>
+                    </div>
                 </div>
 
             </div>
-        </section>
 
+            <p class="text-[#4A5565] text-base md:text-xl max-w-5xl mt-16 font-light text-center">
+                Ова не е само академска теорија пренесена од учебник. Ова е знаење изградено низ реални менаџерски предизвици, трансформации, раст на компании и работа со тимови во комплексни организациски системи, како и бројни консултантски часови.
+            </p>
+        </div>
+    </div>
+
+    <div class="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/60 backdrop-blur-sm"
+        x-show="openTeamModal" 
+        x-transition:enter="transition ease-out duration-300"
+        x-transition:enter-start="opacity-0" 
+        x-transition:enter-end="opacity-100"
+        x-transition:leave="transition ease-in duration-200" 
+        x-transition:leave-start="opacity-100"
+        x-transition:leave-end="opacity-0" 
+        @keydown.escape.window="openTeamModal = false"
+        style="display: none;">
+
+        <div class="relative w-full max-w-4xl bg-white rounded-2xl shadow-2xl border-l-[12px] border-[#5B52A3] flex flex-col sm:flex-row p-6 sm:p-8 overflow-hidden"
+             @click.away="openTeamModal = false"
+             x-show="openTeamModal"
+             x-transition:enter="transition ease-out duration-300"
+             x-transition:enter-start="opacity-0 scale-95" 
+             x-transition:enter-end="opacity-100 scale-100"
+             x-transition:leave="transition ease-in duration-200" 
+             x-transition:leave-start="opacity-100 scale-100"
+             x-transition:leave-end="opacity-0 scale-95">
+            
+            <div class="sm:pr-6 mb-4 sm:mb-0">
+                <span class="text-5xl font-semibold text-[#7AB5A8]" x-text="activeMember.num"></span>
+            </div>
+            
+            <div class="flex-grow">
+                <div class="flex justify-between items-start mb-3">
+                    <h3 class="text-xl font-bold text-gray-900" x-text="activeMember.name"></h3>
+                    <button @click="openTeamModal = false" class="text-gray-400 hover:text-gray-900 transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                    </button>
+                </div>
+                
+                <p class="text-sm text-[#4A5565] mb-6 leading-relaxed" x-text="activeMember.desc"></p>
+                
+                <div class="flex flex-wrap gap-3 items-center">
+                    <a href="#" x-show="activeMember.companyBtn" class="bg-[#5B52A3] hover:bg-[#4f4794] text-white text-sm py-2.5 px-6 rounded-lg transition-colors flex items-center gap-2" x-html="activeMember.companyBtn"></a>
+                    
+                    <a href="#" class="text-[#5B52A3] bg-purple-50 p-2.5 rounded-lg hover:bg-purple-100 transition-colors">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </a>
+                    <a href="#" class="border border-gray-300 text-gray-700 hover:bg-gray-50 text-sm py-2.5 px-6 rounded-lg transition-colors">Go to Linkedin</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
        <section class="py-16 px-4 md:px-8">
     <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
 

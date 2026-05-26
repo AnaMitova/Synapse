@@ -22,44 +22,146 @@
 </div>
 
 <!-- 2 -->
-<div class="flex justify-end px-6 font-sans items-center px-20 pt-20">
-    <div class="w-1/3 space-y-16 flex flex-col items-center mt-4">
-        <div class="flex flex-col w-[333px] pt-1 justify-end items-start">
-            <p class="text-[14px] font-light text-[#5B52A3]">НАШИ УСЛУГИ</p>
-            <p class="text-[#101828] font-bold text-[38px]">Стратегиски HR</p>
-            <p class="text-[#4A5565] font-light text-[20px] pt-[23px]">Ги поврзуваме бизнис целите со HR практиките за создавање усогласени, стабилни и успешни тимови.</p>
+<section class="relative font-sans py-16 px-4 md:px-8 max-w-7xl mx-auto" x-data="{
+    openServiceModal: false,
+    activeService: {},
+    services: {
+        '01': {
+            num: '01',
+            title: 'Стратегиски HR',
+            desc: `Опфаќа: развој на стратегии за човечки ресурси, градење и менторство на HR тимови, организациски дизајн, систематизација на улоги и одговорности, поставување на HR политики и процеси, како и развој на HR KPI и People Analytics рамки.<br><br>
+            Идеално за компании кои растат, се трансформираат или имаат потреба од јасна структура и насока во управувањето со луѓето.<br><br>
+            Преку детална анализа на организацијата, дизајн на соодветни решенија и поставување практични системи и алатки во кои активно учествува менаџментот/HR тимот, добивате јасна организациска структура, прецизно дефинирани улоги и одговорности, усогласеност помеѓу стратегијата и секојдневното работење и стабилна основа за одржлив раст.<br><br>
+            Поставете цврста основа за раст.`
+        },
+        '02': {
+            num: '02',
+            title: 'Менаџирање со перформанси',
+            desc: `Изработуваме дизајн и унапредување на системи за поставување и каскадирање на цели, евалуација на перформанси, KPI системи, фидбек механизми и нивно поврзување со системи за наградување.<br><br>
+            Им помагаме на компаниите и тимовите кои сакаат да воспостават или подобрат систем за управување со перформанси и да обезбедат реална усогласеност со бизнис резултатите.<br><br>
+            Преку дизајн или оптимизација на постојните системи, дефинираме на алатки и процеси, како и обука на менаџерите за нивна ефективна примена. Целосно решение за јасно поставени цели на сите нивоа, мерливи резултати, зголемена одговорност и континуирано подобрување на перформансите.<br><br>
+            Претворете ги целите во реални резултати.`
+        },
+        '03': {
+            num: '03',
+            title: 'Развој на вработени и кариера',
+            desc: `За компаниите кои сакаат да го развијат потенцијалот на своите вработени, да ги задржат талентите и да воспостават структуриран пристап кон кариерен развој, обезбедуваме развој на компетенциски модели, системи за учење и развој, кариерни патеки, интерна мобилност, како и индивидуално и групно кариерно советување.<br><br>
+            Услугите ги реализираме преку дизајн на програми и системи, како и директна работа со вработени и менаџери преку работилници, советување и развојни планови, за да добиете јасни кариерни патеки, подобра искористеност на потенцијалот, поголема ангажираност и создавање на квалитетни работни места со можности за раст.<br><br>
+            Задржете ги и развијте ги најдобрите вработени.`
+        },
+        '04': {
+            num: '04',
+            title: 'Менторство, обуки и HR заедница',
+            desc: `Обуки за менаџери, HR академии, менторство, развој на лидерски и HR компетенции, градење професионални заедници или peer learning формати, создаваме структурирани програми, интерактивни обуки, менторски процеси и континуирана поддршка за менаџери, HR професионалци и организации кои сакаат да ги зајакнат своите капацитети за управување со луѓе.<br><br>
+            Идеално за компании кои се стремат кон поголема сигурност во управувањето со луѓе, поефективни лидерски практики, силна корпоративна култура и директно влијание врз тимската ефективност.<br><br>
+            Изградете лидери кои знаат да водат.`
+        },
+        '05': {
+            num: '05',
+            title: 'HR решенија по мерка',
+            desc: `Секоја компанија има специфични предизвици, комплексни ситуации или потреба од интегриран пристап во управување со луѓето. Имаме решение за секоја од нив: Комбинирани или специфични HR интервенции според потребите на организацијата – од иницијална дијагностика до имплементација на целосни системи.<br><br>
+            Преку анализа, заедничко дефинирање на приоритети и дизајн на прилагодени решенија кои се имплементираат во пракса, создаваме фокусирани и применливи решенија кои директно одговараат на реалните бизнис потреби и водат до подобрување на организацијата и перформансите.<br><br>
+            Изградете лидери кои знаат да водат.`
+        }
+    },
+    openModal(id) {
+        this.activeService = this.services[id];
+        this.openServiceModal = true;
+    }
+}">
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 items-stretch">
+        
+        <div class="flex flex-col justify-center items-start lg:pr-4 mb-6 md:mb-0">
+            <p class="text-[14px] font-semibold text-[#5B52A3] uppercase tracking-wider mb-2">НАШИ УСЛУГИ</p>
+            <p class="text-[#101828] font-bold text-3xl md:text-[38px] leading-tight mb-4">Стратегиски HR</p>
+            <p class="text-[#4A5565] font-light text-lg md:text-[20px] leading-relaxed">Ги поврзуваме бизнис целите со HR практиките за создавање усогласени, стабилни и успешни тимови.</p>
         </div>
-        <div class="w-[360px] h-[280px] mt-7 flex flex-col gap-4 justify-center  shadow-[0_6px_16px_#5B52A34D] bg-white p-[36px] rounded-3xl">
-            <p class="text-[20px] font-semibold">Развој на вработени <br/>и кариера</p>
-            <p class="text-[15px] font-light">Развиваме лидери и тимови преку практични програми, обуки и алатки што создаваат реален импакт.</p>
-            <p class="text-[14px] font-semibold">Прочитај повеќе →</p>
+
+        <div @click="openModal('01')" class="group bg-white p-8 rounded-3xl shadow-[0_6px_16px_#5B52A315] flex flex-col justify-between gap-4 cursor-pointer transition-all duration-300 ease-out origin-center hover:-rotate-2 hover:-translate-y-2 hover:shadow-2xl hover:bg-[#5B52A3]">
+            <div>
+                <p class="text-[20px] font-semibold text-[#101828] mb-3 group-hover:text-white transition-colors duration-300">Стратегиски HR и организациски развој</p>
+                <p class="text-[15px] font-light text-[#4A5565] group-hover:text-white/90 transition-colors duration-300">Ги усогласуваме HR процесите со растот на компанијата преку современи стратегии, структури и системи.</p>
+            </div>
+            <p class="text-[14px] font-semibold text-[#101828] mt-4 group-hover:text-white transition-colors duration-300">Прочитај повеќе →</p>
+        </div>
+
+        <div @click="openModal('02')" class="group bg-white p-8 rounded-3xl shadow-[0_6px_16px_#5B52A315] flex flex-col justify-between gap-4 cursor-pointer transition-all duration-300 ease-out origin-center hover:-rotate-2 hover:-translate-y-2 hover:shadow-2xl hover:bg-[#7AB5A8]">
+            <div>
+                <p class="text-[20px] font-semibold text-[#101828] mb-3 group-hover:text-white transition-colors duration-300">Менаџирање со перформанси</p>
+                <p class="text-[15px] font-light text-[#4A5565] group-hover:text-white/90 transition-colors duration-300">Поставување и каскадирање на цели, оценка на учинок, KPI и фидбек</p>
+            </div>
+            <p class="text-[14px] font-semibold text-[#101828] mt-4 group-hover:text-white transition-colors duration-300">Прочитај повеќе →</p>
+        </div>
+
+        <div @click="openModal('03')" class="group bg-white p-8 rounded-3xl shadow-[0_6px_16px_#5B52A315] flex flex-col justify-between gap-4 cursor-pointer transition-all duration-300 ease-out origin-center hover:-rotate-2 hover:-translate-y-2 hover:shadow-2xl hover:bg-[#5B52A3]">
+            <div>
+                <p class="text-[20px] font-semibold text-[#101828] mb-3 group-hover:text-white transition-colors duration-300">Развој на вработени <br/>и кариера</p>
+                <p class="text-[15px] font-light text-[#4A5565] group-hover:text-white/90 transition-colors duration-300">Развиваме лидери и тимови преку практични програми, обуки и алатки што создаваат реален импакт.</p>
+            </div>
+            <p class="text-[14px] font-semibold text-[#101828] mt-4 group-hover:text-white transition-colors duration-300">Прочитај повеќе →</p>
+        </div>
+
+        <div @click="openModal('04')" class="group bg-white p-8 rounded-3xl shadow-[0_6px_16px_#5B52A315] flex flex-col justify-between gap-4 cursor-pointer transition-all duration-300 ease-out origin-center hover:-rotate-2 hover:-translate-y-2 hover:shadow-2xl hover:bg-[#7AB5A8]">
+            <div>
+                <p class="text-[20px] font-semibold text-[#101828] mb-3 group-hover:text-white transition-colors duration-300">Менторство и обуки</p>
+                <p class="text-[15px] font-light text-[#4A5565] group-hover:text-white/90 transition-colors duration-300">Обуки за менаџери, HR академии, менторство, развој на лидерски и HR компетенции, градење професионални заедници</p>
+            </div>
+            <p class="text-[14px] font-semibold text-[#101828] mt-4 group-hover:text-white transition-colors duration-300">Прочитај повеќе →</p>
+        </div>
+
+        <div @click="openModal('05')" class="group bg-white p-8 rounded-3xl shadow-[0_6px_16px_#5B52A315] flex flex-col justify-between gap-4 cursor-pointer transition-all duration-300 ease-out origin-center hover:-rotate-2 hover:-translate-y-2 hover:shadow-2xl hover:bg-[#5B52A3]">
+            <div>
+                <p class="text-[20px] font-semibold text-[#101828] mb-3 group-hover:text-white transition-colors duration-300">HR решенија по мерка</p>
+                <p class="text-[15px] font-light text-[#4A5565] group-hover:text-white/90 transition-colors duration-300">Преку анализа, заедничко дефинирање на приоритети и дизајн создаваме фокусирани и применливи решенија</p>
+            </div>
+            <p class="text-[14px] font-semibold text-[#101828] mt-4 group-hover:text-white transition-colors duration-300">Прочитај повеќе →</p>
+        </div>
+
+    </div>
+
+    <div class="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/60 backdrop-blur-sm"
+        x-show="openServiceModal" 
+        x-transition:enter="transition ease-out duration-300"
+        x-transition:enter-start="opacity-0" 
+        x-transition:enter-end="opacity-100"
+        x-transition:leave="transition ease-in duration-200" 
+        x-transition:leave-start="opacity-100"
+        x-transition:leave-end="opacity-0" 
+        @keydown.escape.window="openServiceModal = false"
+        style="display: none;">
+
+        <div class="relative w-full max-w-4xl bg-white rounded-2xl shadow-2xl border-l-[12px] border-[#5B52A3] flex flex-col sm:flex-row p-6 sm:p-8 overflow-hidden"
+             @click.away="openServiceModal = false"
+             x-show="openServiceModal"
+             x-transition:enter="transition ease-out duration-300"
+             x-transition:enter-start="opacity-0 scale-95" 
+             x-transition:enter-end="opacity-100 scale-100"
+             x-transition:leave="transition ease-in duration-200" 
+             x-transition:leave-start="opacity-100 scale-100"
+             x-transition:leave-end="opacity-0 scale-95">
+            
+            <div class="sm:pr-6 mb-4 sm:mb-0">
+                <span class="text-5xl font-semibold text-[#7AB5A8]" x-text="activeService.num"></span>
+            </div>
+            
+            <div class="flex-grow">
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="text-2xl font-bold text-[#101828]" x-text="activeService.title"></h3>
+                    <button @click="openServiceModal = false" class="text-gray-400 hover:text-[#101828] transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                    </button>
+                </div>
+                
+                <p class="text-sm text-[#4A5565] mb-8 leading-relaxed" x-html="activeService.desc"></p>
+                
+                <a href="#" class="inline-flex bg-[#5B52A3] hover:bg-[#4f4794] text-white text-sm py-3 px-6 rounded-lg transition-colors items-center gap-2 font-medium">
+                    Контактирајте нè &rarr;
+                </a>
+            </div>
         </div>
     </div>
-    <div class="w-1/3 space-y-13 flex flex-col items-center">
-        <div class="w-[360px] h-[280px] flex flex-col gap-4 justify-center shadow-[0_6px_16px_#5B52A34D] bg-white p-[36px] rounded-3xl">
-            <p class="text-[20px] font-semibold">Стратегиски HR и организациски развој</p>
-            <p class="text-[15px] font-light">Ги усогласуваме HR процесите со растот на компанијата преку современи стратегии, структури и системи.</p>
-            <p class="text-[14px] font-semibold">Прочитај повеќе →</p>
-        </div>
-        <div class="w-[360px] h-[280px] flex flex-col gap-4 justify-center shadow-[0_6px_16px_#5B52A34D] bg-white p-[36px] rounded-3xl">
-            <p class="text-[20px] font-semibold">Менторство и обуки</p>
-            <p class="text-[15px] font-light">Обуки за менаџери, HR академии, менторство, развој на лидерски и HR компетенции, градење професионални заедници </p>
-            <p class="text-[14px] font-semibold">Прочитај повеќе →</p>
-        </div>
-    </div>
-    <div class="w-1/3 space-y-13 flex flex-col items-center">
-        <div class="w-[360px] h-[280px] flex flex-col gap-4 justify-center shadow-[0_6px_16px_#5B52A34D] bg-white p-[36px] rounded-3xl">
-            <p class="text-[20px] font-semibold">Менаџирање со перформанси</p>
-            <p class="text-[15px] font-light">Поставување и каскадирање на цели, оценка на учинок, KPI и фидбек</p>
-            <p class="text-[14px] font-semibold">Прочитај повеќе →</p>
-        </div>
-        <div class="w-[360px] h-[280px] flex flex-col gap-4 justify-center shadow-[0_6px_16px_#5B52A34D] bg-white p-[36px] rounded-3xl">
-            <p class="text-[20px] font-semibold">HR решенија по мерка</p>
-            <p class="text-[15px] font-light">Преку анализа, заедничко дефинирање на приоритети и дизајн создаваме фокусирани и применливи решенија</p>
-            <p class="text-[14px] font-semibold">Прочитај повеќе →</p>
-        </div>
-    </div>
-</div>
+</section>
 
 <!-- 3 -->
 <div class="flex flex-col px-6 font-sans justify-center items-center pt-24">
@@ -184,7 +286,7 @@
             <img src="{{ asset('img/check.png') }}" class="w-[22px] h-[22px]"/>
             <p>Практична и интерактивна програма</p>
         </div>
-        <a class="bg-[#7AB5A8] text-white mt-10 w-[245px] text-center rounded-xl px-6 py-4 ">Разгледај ја академијата</a>
+        <a class="bg-[#7AB5A8] text-white mt-10 w-[245px] text-center rounded-xl px-6 py-4 " href="/academy">Разгледај ја академијата</a>
     </div>
     <div id="desno" class="w-1/2 pl-7 flex flex-col gap-10 justify-center">
         <p class="bg-[#FFFFFF1A] border-2 border-[#FFFFFF33] p-8 w-[552px] font-semibold leading-8 text-[#FFFFFFB2] rounded-2xl">Програмите се дизајнирани за практична примена и долгорочен развој на организациите и тимовите.</p>
@@ -193,49 +295,148 @@
 </div>
 
 <!-- 6 -->
-<div class="font-sans flex flex-col items-center pt-16">
-    <p class="text-[14px] text-[#7AB5A8] font-light">ПОВЕЌЕ ЗА КОИ СЕ SYNAPSEHP</p>
-    <p class="font-semibold text-[40px] text-[#101828]">Нашиот тим</p>
-    <p class="text-[20px] text-[#4A5565] font-light px-48 text-center">SynapseHR е колектив на докажани HR консултанти кои го здружуваат своето долгогодишно корпоративно искуство за да понудат системски, стратегиски и практични решенија.</p>
-    <div class="pt-10 flex space-x-8 justify-center">
-        <div class="w-[285px] h-[580px] bg-white rounded-2xl shadow-[0_6px_16px_#7AB5A866]">
-            <img class="w-full" src="{{ asset('img/tomida.png') }}" />
-            <div class="p-7 flex flex-col gap-2">
-                <p class="text-[18px] font-semibold">Томида Караиванова Алаѓозовска</p>
-                <p class="text-[16px] text-[#5B52A3] font-light">Експерт за стратегиско управување со човечки ресурси и HR системи</p>
-                <a class="text-[16px] font-light pb-7">Прочитај повеќе →</a>
+<section class="px-4 py-16 md:px-8 relative" x-data="{
+    openTeamModal: false,
+    activeMember: {},
+    team: {
+        '01': {
+            num: '01',
+            name: 'Томида Караиванова Алаѓозовска',
+            role: 'Експерт за стратегиско управување со човечки ресурси и HR системи',
+            desc: 'Експерт за стратегиско управување со човечки ресурси и HR системи, со 20 години искуство во FMCG, производство, телекомуникации, хотелиерство, авио индустрија, градежништво. Работела како корпоративен HR директор на ниво на повеќе држави, со фокус на усогласување на бизнисот и луѓето преку јасни структури, процеси и одлуки. Томида е Стратешки HR консултант и основач на Evolvia.',
+            companyBtn: 'Evolvia &rarr;'
+        },
+        '02': {
+            num: '02',
+            name: 'Ана Костовска',
+            role: 'Организациски психолог и експерт за развој на луѓе и системи',
+            desc: 'Организациски психолог со 17+ години искуство во различни индустрии и организациски контексти (телеком, малопродажба, производство). Работи на развој на луѓе и системи, поврзувајќи психологија и менаџмент пракса за создавање стабилни тимови и одржливи резултати. Ана е основач на CSD SONIK, им помага на луѓето и организациите да се развиваат со јасна цел и самодоверба.',
+            companyBtn: 'CSD SONIK &rarr;'
+        },
+        '03': {
+            num: '03',
+            name: 'Ивана Дојчиновска Стојановиќ',
+            role: 'Експерт за организациски дизајн, HR системи и кариерен развој',
+            desc: 'Експерт за организациски дизајн, HR системи и кариерен развој, со над 20 години искуство во банкарство и производни системи. Работела на лидерски HR позиции во меѓународни компании, а денес поддржува организации и поединци во развој, трансформација и кариерен раст. Ивана е основач на Prudens Consulting, која со јасен и практичен пристап ги претвора комплексните предизвици во структурирани, одржливи решенија.',
+            companyBtn: 'Prudens Consulting &rarr;'
+        },
+        '04': {
+            num: '04',
+            name: 'Искра Конеска',
+            role: 'HR лидер специјализирана во HRIS, перформанси и организациски развој',
+            desc: 'HR лидер со над 20 годишно искуство, специјализирана во HRIS, перформанси и организациски развој. Работела во IT, FMCG и автомобилска индустрија, активно поттикнува иновации и раст на современи HR професионалци. Искра со практичен и иновативен пристап гради системи што го поддржуваат развојот на луѓето, организациската култура и лидерството.',
+            companyBtn: '' 
+        }
+    },
+    openMember(id) {
+        this.activeMember = this.team[id];
+        this.openTeamModal = true;
+    }
+}">
+
+    <div class="max-w-7xl mx-auto">
+        <div class="font-sans flex flex-col items-center">
+
+            <p class="text-sm text-[#7AB5A8] font-light uppercase tracking-wider mb-2">ПОВЕЌЕ ЗА КОИ СЕ SYNAPSEHR</p>
+            <p class="font-semibold text-3xl md:text-5xl text-[#101828] mb-6 text-center">Нашиот тим</p>
+            <p class="text-base md:text-xl text-[#4A5565] font-light max-w-4xl text-center mb-12">
+                SynapseHR е колектив на докажани HR консултанти кои го здружуваат своето долгогодишно корпоративно
+                искуство за да понудат системски, стратегиски и практични решенија.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
+                
+                <div class="bg-white rounded-2xl shadow-[0_6px_16px_#7AB5A866] flex flex-col overflow-hidden">
+                    <img class="w-full h-auto object-cover" src="{{ asset('img/tomida.png') }}" alt="Томида" />
+                    <div class="p-6 flex flex-col flex-grow">
+                        <p class="text-lg font-semibold mb-2">Томида Караиванова Алаѓозовска</p>
+                        <p class="text-base text-[#5B52A3] font-light mb-6 flex-grow">Експерт за стратегиско управување со човечки ресурси и HR системи</p>
+                        <button @click="openMember('01')" class="text-left text-base font-light text-[#101828] hover:text-[#7AB5A8] transition-colors mt-auto inline-flex items-center gap-1">Прочитај повеќе →</button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-[0_6px_16px_#7AB5A866] flex flex-col overflow-hidden">
+                    <img class="w-full h-auto object-cover" src="{{ asset('img/ana.png') }}" alt="Ана" />
+                    <div class="p-6 flex flex-col flex-grow">
+                        <p class="text-lg font-semibold mb-2">Ана Костовска</p>
+                        <p class="text-base text-[#5B52A3] font-light mb-6 flex-grow">Организациски психолог и експерт за развој на луѓе и системи</p>
+                        <button @click="openMember('02')" class="text-left text-base font-light text-[#101828] hover:text-[#7AB5A8] transition-colors mt-auto inline-flex items-center gap-1">Прочитај повеќе →</button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-[0_6px_16px_#7AB5A866] flex flex-col overflow-hidden">
+                    <img class="w-full h-auto object-cover" src="{{ asset('img/ivana.png') }}" alt="Ивана" />
+                    <div class="p-6 flex flex-col flex-grow">
+                        <p class="text-lg font-semibold mb-2">Ивана Дојчиновска Стојановиќ</p>
+                        <p class="text-base text-[#5B52A3] font-light mb-6 flex-grow">Експерт за организациски дизајн, HR системи и кариерен развој</p>
+                        <button @click="openMember('03')" class="text-left text-base font-light text-[#101828] hover:text-[#7AB5A8] transition-colors mt-auto inline-flex items-center gap-1">Прочитај повеќе →</button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-[0_6px_16px_#7AB5A866] flex flex-col overflow-hidden">
+                    <img class="w-full h-auto object-cover" src="{{ asset('img/iskra.png') }}" alt="Искра" />
+                    <div class="p-6 flex flex-col flex-grow">
+                        <p class="text-lg font-semibold mb-2">Искра Конеска</p>
+                        <p class="text-base text-[#5B52A3] font-light mb-6 flex-grow">HR лидер специјализирана во HRIS, перформанси и организациски развој</p>
+                        <button @click="openMember('04')" class="text-left text-base font-light text-[#101828] hover:text-[#7AB5A8] transition-colors mt-auto inline-flex items-center gap-1">Прочитај повеќе →</button>
+                    </div>
+                </div>
+
             </div>
 
+            <p class="text-[#4A5565] text-base md:text-xl max-w-5xl mt-16 font-light text-center">
+                Ова не е само академска теорија пренесена од учебник. Ова е знаење изградено низ реални менаџерски предизвици, трансформации, раст на компании и работа со тимови во комплексни организациски системи, како и бројни консултантски часови.
+            </p>
         </div>
-        <div class="w-[285px] h-[580px] bg-white rounded-2xl shadow-[0_6px_16px_#7AB5A866]">
-            <img class="w-full" src="{{ asset('img/tomida.png') }}" />
-            <div class="p-7 flex flex-col gap-2">
-                <p class="text-[18px] font-semibold">Томида Караиванова Алаѓозовска</p>
-                <p class="text-[16px] text-[#5B52A3] font-light">Експерт за стратегиско управување со човечки ресурси и HR системи</p>
-                <a class="text-[16px] font-light pb-7">Прочитај повеќе →</a>
-            </div>
+    </div>
 
-        </div>
-        <div class="w-[285px] h-[580px] bg-white rounded-2xl shadow-[0_6px_16px_#7AB5A866]">
-            <img class="w-full" src="{{ asset('img/tomida.png') }}" />
-            <div class="p-7 flex flex-col gap-2">
-                <p class="text-[18px] font-semibold">Томида Караиванова Алаѓозовска</p>
-                <p class="text-[16px] text-[#5B52A3] font-light">Експерт за стратегиско управување со човечки ресурси и HR системи</p>
-                <a class="text-[16px] font-light pb-7">Прочитај повеќе →</a>
-            </div>
+    <div class="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/60 backdrop-blur-sm"
+        x-show="openTeamModal" 
+        x-transition:enter="transition ease-out duration-300"
+        x-transition:enter-start="opacity-0" 
+        x-transition:enter-end="opacity-100"
+        x-transition:leave="transition ease-in duration-200" 
+        x-transition:leave-start="opacity-100"
+        x-transition:leave-end="opacity-0" 
+        @keydown.escape.window="openTeamModal = false"
+        style="display: none;">
 
-        </div>
-        <div class="w-[285px] h-[580px] bg-white rounded-2xl shadow-[0_6px_16px_#7AB5A866]">
-            <img class="w-full" src="{{ asset('img/tomida.png') }}" />
-            <div class="p-7 flex flex-col gap-2">
-                <p class="text-[18px] font-semibold">Томида Караиванова Алаѓозовска</p>
-                <p class="text-[16px] text-[#5B52A3] font-light">Експерт за стратегиско управување со човечки ресурси и HR системи</p>
-                <a class="text-[16px] font-light pb-7">Прочитај повеќе →</a>
+        <div class="relative w-full max-w-4xl bg-white rounded-2xl shadow-2xl border-l-[12px] border-[#5B52A3] flex flex-col sm:flex-row p-6 sm:p-8 overflow-hidden"
+             @click.away="openTeamModal = false"
+             x-show="openTeamModal"
+             x-transition:enter="transition ease-out duration-300"
+             x-transition:enter-start="opacity-0 scale-95" 
+             x-transition:enter-end="opacity-100 scale-100"
+             x-transition:leave="transition ease-in duration-200" 
+             x-transition:leave-start="opacity-100 scale-100"
+             x-transition:leave-end="opacity-0 scale-95">
+            
+            <div class="sm:pr-6 mb-4 sm:mb-0">
+                <span class="text-5xl font-semibold text-[#7AB5A8]" x-text="activeMember.num"></span>
+            </div>
+            
+            <div class="flex-grow">
+                <div class="flex justify-between items-start mb-3">
+                    <h3 class="text-xl font-bold text-gray-900" x-text="activeMember.name"></h3>
+                    <button @click="openTeamModal = false" class="text-gray-400 hover:text-gray-900 transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                    </button>
+                </div>
+                
+                <p class="text-sm text-[#4A5565] mb-6 leading-relaxed" x-text="activeMember.desc"></p>
+                
+                <div class="flex flex-wrap gap-3 items-center">
+                    <a href="#" x-show="activeMember.companyBtn" class="bg-[#5B52A3] hover:bg-[#4f4794] text-white text-sm py-2.5 px-6 rounded-lg transition-colors flex items-center gap-2" x-html="activeMember.companyBtn"></a>
+                    
+                    <a href="#" class="text-[#5B52A3] bg-purple-50 p-2.5 rounded-lg hover:bg-purple-100 transition-colors">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </a>
+                    <a href="#" class="border border-gray-300 text-gray-700 hover:bg-gray-50 text-sm py-2.5 px-6 rounded-lg transition-colors">Go to Linkedin</a>
+                </div>
             </div>
         </div>
     </div>
-    <p class="text-[#4A5565] text-[20px] px-64 pt-10 font-light text-center">Веруваме дека најдобрите резултати доаѓаат од обединета експертиза. Затоа работиме како колектив – за да ви ја обезбедиме вистинската комбинација на знаење, искуство и пристап, според вашите конкретни потреби.</p>
-</div>
+</section>
 
 <!-- 7 -->
  <section class="py-24 bg-[#F5F7F7] font-sans">
@@ -476,6 +677,62 @@
 
 <!-- AlpineJS -->
 <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+ <section class=" py-12 px-4">
+            <div class="max-w-6xl mx-auto bg-white rounded-2xl p-8 shadow-sm relative overflow-hidden">
+
+                <div class="absolute top-0 left-0 right-0 h-2.5 pointer-events-none"
+                    style="background: linear-gradient(to right, #5B52A3, #5BA3A1);">
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center mt-2">
+
+                    <div class="flex flex-col items-center">
+                        <div
+                            class="w-12 h-12 rounded-full bg-[#F1F5F9] text-[#5B52A3] flex items-center justify-center mb-4">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <h4 class="font-medium text-[#101828] text-[17px] mb-1">Пратете ни меил</h4>
+                        <a href="mailto:peopleschool@synapsehr.mk"
+                            class="text-[15px] font-light text-[#5B52A3] hover:underline underline-offset-4 decoration-1">peopleschool@synapsehr.mk</a>
+                    </div>
+
+                    <div class="flex flex-col items-center">
+                        <div
+                            class="w-12 h-12 rounded-full bg-[#F1F5F9] text-[#5B52A3] flex items-center justify-center mb-4">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                            </svg>
+                        </div>
+                        <h4 class="font-medium text-[#101828] text-[17px] mb-1">Заследете не:</h4>
+                        <a href="#" target="_blank"
+                            class="text-[15px] font-light text-[#64748B] hover:text-[#5B52A3] transition-colors">SynapseHR
+                            на LinkedIn</a>
+                    </div>
+
+                    <div class="flex flex-col items-center">
+                        <div
+                            class="w-12 h-12 rounded-full bg-[#F1F5F9] text-[#5B52A3] flex items-center justify-center mb-4">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                        </div>
+                        <h4 class="font-medium text-[#101828] text-[17px] mb-1">Телефонски број</h4>
+                        <p class="text-[15px] font-light text-[#64748B]">+389 72 308 607</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
 
 <!-- form -->
 <div class="min-h-screen flex items-center justify-center h-[470px]   bg-[#f5f5f5] font-sans py-16 px-6">
