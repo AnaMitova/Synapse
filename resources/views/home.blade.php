@@ -454,10 +454,10 @@
         </div>
 
         <!-- FAQ -->
-        <div data-aos="fade-up" class="space-y-6 flex flex-col items-center">
+        <div class="space-y-6 flex flex-col items-center">
 
             <!-- Item -->
-            <div x-data="{ open: true }"
+            <div data-aos="fade-right" x-data="{ open: true }"
                  class="bg-white w-[830px] rounded-[30px] shadow-[0_6px_18px_#0000001A] border border-[#E9EEEE] overflow-hidden">
 
                 <!-- Button -->
@@ -500,7 +500,7 @@
                 </div>
             </div>
                         <!-- Item -->
-            <div x-data="{ open: false }"
+            <div data-aos="fade-left" x-data="{ open: false }"
                  class="bg-white w-[830px] rounded-[30px] shadow-[0_6px_18px_#0000001A] border border-[#E9EEEE] overflow-hidden">
 
                 <!-- Button -->
@@ -543,7 +543,7 @@
                 </div>
             </div>
             <!-- Item -->
-            <div x-data="{ open: false }"
+            <div data-aos="fade-right" x-data="{ open: false }"
                  class="bg-white w-[830px] rounded-[30px] shadow-[0_6px_18px_#0000001A] border border-[#E9EEEE] overflow-hidden">
 
                 <!-- Button -->
@@ -586,7 +586,7 @@
                 </div>
             </div>
             <!-- Item -->
-            <div x-data="{ open: false }"
+            <div data-aos="fade-left" x-data="{ open: false }"
                  class="bg-white w-[830px] rounded-[30px] shadow-[0_6px_18px_#0000001A] border border-[#E9EEEE] overflow-hidden">
 
                 <!-- Button -->
@@ -629,7 +629,7 @@
                 </div>
             </div>
             <!-- Item -->
-            <div x-data="{ open: false }"
+            <div data-aos="fade-right" x-data="{ open: false }"
                  class="bg-white w-[830px] rounded-[30px] shadow-[0_6px_18px_#0000001A] border border-[#E9EEEE] overflow-hidden">
 
                 <!-- Button -->
