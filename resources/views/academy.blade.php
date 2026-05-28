@@ -46,10 +46,11 @@
                     </div>
 
                     <div class="flex flex-wrap gap-4 pt-10">
-                        <a href="#"
-                            class="bg-[#5B52A3] hover:bg-[#4f4794] transition-all text-white px-8 py-4 rounded-2xl text-[18px] lg:text-[20px] shadow-lg">
-                            Пријави се →
-                        </a>
+                       <a href="#registration-section"
+   onclick="event.preventDefault(); document.getElementById('registration-section').scrollIntoView({ behavior: 'smooth' });"
+   class="bg-[#5B52A3] hover:bg-[#4f4794] transition-all text-white px-8 py-4 rounded-2xl text-[18px] lg:text-[20px] shadow-lg inline-block">
+   Пријави се →
+</a>
                         <a href="#modules-section"
                             onclick="event.preventDefault(); document.getElementById('modules-section').scrollIntoView({ behavior: 'smooth' });"
                             class="border border-[#D0D5DD] bg-white px-8 py-4 rounded-2xl text-[18px] lg:text-[20px] text-[#344054] shadow-sm">
@@ -227,7 +228,7 @@
         </section>
 
         <!-- WHY SECTION -->
-        <section data-aos="fade-up" class="max-w-5xl mx-auto text-center pt-28 px-6 lg:px-8">
+        <section id="what-is-spm" data-aos="fade-up" class="max-w-5xl mx-auto text-center pt-28 px-6 lg:px-8">
 
             <h2 class="text-[42px] md:text-[52px] font-semibold text-[#101828] leading-[1.1]">
                 Зошто ви е потребна SPM?
@@ -372,7 +373,7 @@
             </div>
 
         </section>
-        <section data-aos="fade-up" class=" py-16 px-4">
+        <section id="target-audience" data-aos="fade-up" class=" py-16 px-4">
             <div class="max-w-6xl mx-auto text-center">
                 <h2 class="text-[48px] font-bold text-[#101828] mb-12">За кого е наменета?</h2>
 
@@ -462,7 +463,7 @@
             </div>
         </section>
 
-       <section class="py-16 px-4 md:px-8 lg:px-28">
+       <section id="spm-2026" class="py-16 px-4 md:px-8 lg:px-28">
     <div class="max-w-7xl mx-auto">
         
         <span data-aos="fade-right" class="text-sm md:text-[18px] font-light tracking-wider text-[#5B52A3] uppercase block mb-3">SPM 2026</span>
@@ -956,7 +957,7 @@
             </div>
         </div>
 
-        <div data-aos="fade-left" class="bg-white w-full max-w-xl mx-auto lg:mx-0 lg:ml-auto rounded-3xl p-6 sm:p-8 shadow-xl border border-[#EEF2F6]">
+        <div id="registration-section" data-aos="fade-left" class="bg-white w-full max-w-xl mx-auto lg:mx-0 lg:ml-auto rounded-3xl p-6 sm:p-8 shadow-xl border border-[#EEF2F6]">
             <form action="{{ route('applications.store') }}" method="POST" class="space-y-5">
                 @csrf
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
@@ -1097,7 +1098,7 @@
             </div>
         </section>
 
-        <section data-aos="fade-up" class=" py-12 px-4">
+        <section id="contact-section" data-aos="fade-up" class=" py-12 px-4">
             <div class="max-w-6xl mx-auto bg-white rounded-2xl p-8 shadow-sm relative overflow-hidden">
 
                 <div class="absolute top-0 left-0 right-0 h-2.5 pointer-events-none"

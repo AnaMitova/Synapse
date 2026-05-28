@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.home')
 
 @section('content')
 
@@ -354,7 +354,7 @@
 </div>
 
 <!-- 6 -->
-<section class="px-4 py-16 md:px-8 relative" x-data="{
+<section id="about-section" class="px-4 py-16 md:px-8 relative" x-data="{
     openTeamModal: false,
     activeMember: {},
     team: {
@@ -651,7 +651,228 @@
 
 <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
-  <section data-aos="fade-up" class=" py-12 px-4">
+<section id="news-section" class="bg-[#F8FAFC] py-16 md:py-24 font-sans" 
+         x-data="{ 
+            activeFilter: 'najnovo', 
+            activeModal: null,
+            items: [
+                {
+                    id: 1,
+                    tag: 'НОВОСТИ',
+                    title: 'SynapseHR експерти говорници на PowerToHR 4 во Приштина',
+                    desc: 'Четири SynapseHR експерти настапија на регионалниот HR самит со преку 1.300 учесници, отворајќи клучни теми за иднината на работата и HR трансформацијата.',
+                    img: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=600&q=80',
+                    actionType: 'modal',
+                    target: 1,
+                    views: 95
+                },
+                {
+                    id: 2,
+                    tag: 'НОВОСТИ | РЕСУРСИ',
+                    title: 'Скриените димензии на квалитетните работни места',
+                    desc: 'Квалитетното работно место во вашата компанија не значи исто за секого и во секоја фаза од неговата кариера. Секој вработен има различни очекувања од работата некој сака поголема автономија...',
+                    img: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80',
+                    actionType: 'link',
+                    target: 'https://ekonomijaibiznis.mk/човечки-ресурси-томида-караиванова-а/?IdNews=48026',
+                    views: 60
+                },
+                {
+                    id: 3,
+                    tag: 'НОВОСТИ | РЕСУРСИ',
+                    title: 'Средниот раководен кадар – точката каде што стратегијата оживува или пропаѓа',
+                    desc: 'Во праксата, неподготвениот среден раководен кадар функционира како мултипликатор на ризик. Една лошо водена одлука ретко останува изолирана.',
+                    img: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=600&q=80',
+                    actionType: 'link',
+                    target: 'https://ekonomijaibiznis.mk/скриените-димензии-на-квалитетните-р/',
+                    views: 120
+                },
+                {
+                    id: 4,
+                    tag: 'НОВОСТИ',
+                    title: 'SynapseHR го најавува почетокот на Школата за менцирање со луѓе/ School for People Management (SPM)',
+                    desc: 'Специјално дизајнирана програма за развој на менаџерски и лидерски вештини, наменета за сите кои управуваат со луѓе.',
+                    img: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=600&q=80',
+                    actionType: 'link',
+                    target: '/school-for-people-management',
+                    views: 40
+                },
+                {
+                    id: 5,
+                    tag: 'НОВОСТИ',
+                    title: 'Flex Group Leadership Academy – развој на лидерство со предавачите од SynapseHR',
+                    desc: 'Стратешка, долгорочна иницијатива на Секторот за човечки ресурси на Флекс Груп, насочена кон системско јакнење на лидерските и менаџерските капацитети...',
+                    img: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=600&q=80',
+                    actionType: 'modal',
+                    target: 5,
+                    views: 85
+                },
+                {
+                    id: 6,
+                    tag: 'НОВОСТИ',
+                    title: 'Интервју за 24hr.mk - SYNAPSEHR: КОЛЕКТИВНА ЕКСПЕРТИЗА ЗА ЈАСНОСТ, ПЕРФОРМАНС И ОДРЖЛИВ РАСТ',
+                    desc: 'Колективниот модел им дава на клиентите нешто што е реткост во консалтингот – здружена перспектива од искусни HR професионалци.',
+                    img: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=600&q=80',
+                    actionType: 'link',
+                    target: 'https://24hr.mk/synapsehr-kolektivna-ekspertiza-za-jasnost-performans-i-odrzhliv-rast/',
+                    views: 110
+                }
+            ],
+            get filteredItems() {
+                if (this.activeFilter === 'najnovo') {
+                    return [...this.items].sort((a, b) => b.id - a.id);
+                }
+                if (this.activeFilter === 'najstaro') {
+                    return [...this.items].sort((a, b) => a.id - b.id);
+                }
+                if (this.activeFilter === 'najaktuelno') {
+                    return [...this.items].sort((a, b) => b.views - a.views);
+                }
+                return this.items;
+            }
+         }">
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center mb-12">
+            <span class="text-xs font-semibold tracking-widest text-[#5B52A3] uppercase block mb-2">Совети и новости</span>
+            <h2 class="text-3xl md:text-4xl font-extrabold text-[#1E293B] mb-3">Што е ново?</h2>
+            <h3 class="text-xl md:text-2xl font-medium text-[#4A5568]">
+                Што говорат експертите во <span class="text-[#5BA3A1] font-bold">SynapseHR?</span>
+            </h3>
+        </div>
+
+        <div class="flex justify-center items-center gap-3 mb-16">
+            <button @click="activeFilter = 'najnovo'" 
+                    :class="activeFilter === 'najnovo' ? 'bg-white text-[#1E293B] shadow-md border-gray-100' : 'bg-transparent text-gray-500 border-transparent hover:text-gray-800'"
+                    class="px-6 py-2.5 rounded-full text-sm font-medium border transition-all duration-200 cursor-pointer">
+                Најново
+            </button>
+            <button @click="activeFilter = 'najstaro'" 
+                    :class="activeFilter === 'najstaro' ? 'bg-white text-[#1E293B] shadow-md border-gray-100' : 'bg-transparent text-gray-500 border-transparent hover:text-gray-800'"
+                    class="px-6 py-2.5 rounded-full text-sm font-medium border transition-all duration-200 cursor-pointer">
+                Најстаро
+            </button>
+            <button @click="activeFilter = 'najaktuelno'" 
+                    :class="activeFilter === 'najaktuelno' ? 'bg-white text-[#1E293B] shadow-md border-gray-100' : 'bg-transparent text-gray-500 border-transparent hover:text-gray-800'"
+                    class="px-6 py-2.5 rounded-full text-sm font-medium border transition-all duration-200 cursor-pointer">
+                Најактуелно
+            </button>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <template x-for="item in filteredItems" :key="item.id">
+                <div class="bg-white rounded-[24px] shadow-sm hover:shadow-xl border border-gray-100 overflow-hidden flex flex-col justify-between transition-all duration-300 group">
+                    <div>
+                        <div class="relative h-56 w-full overflow-hidden bg-gray-100">
+                            <img :src="item.img" alt="News Image" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-md shadow-sm">
+                                <span class="text-[10px] font-bold text-gray-700 tracking-wide uppercase" x-text="item.tag"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="p-6 md:p-7">
+                            <h4 class="text-lg font-bold text-[#1E293B] leading-snug mb-3 group-hover:text-[#5B52A3] transition-colors duration-200 min-h-[56px]" x-text="item.title"></h4>
+                            <p class="text-sm font-light text-gray-500 leading-relaxed line-clamp-4 mb-4" x-text="item.desc"></p>
+                        </div>
+                    </div>
+
+                    <div class="px-6 pb-7 pt-2">
+                        <template x-if="item.actionType === 'modal'">
+                            <button @click="activeModal = item.target" class="text-xs font-semibold text-gray-600 hover:text-[#5B52A3] flex items-center gap-2 transition-colors cursor-pointer">
+                                <span>Прочитај повеќе</span>
+                                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                            </button>
+                        </template>
+                        <template x-if="item.actionType === 'link'">
+                            <a :href="item.target" :target="item.target.startsWith('http') ? '_blank' : '_self'" class="text-xs font-semibold text-gray-600 hover:text-[#5B52A3] inline-flex items-center gap-2 transition-colors">
+                                <span>Прочитај повеќе</span>
+                                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                            </a>
+                        </template>
+                    </div>
+                </div>
+            </template>
+        </div>
+    </div>
+
+    <div class="fixed inset-0 z-50 overflow-y-auto flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm" 
+         x-show="activeModal === 1" x-cloak x-transition>
+        <div class="bg-white rounded-[24px] max-w-2xl w-full p-6 md:p-8 relative shadow-2xl" @click.away="activeModal = null">
+            <button @click="activeModal = null" class="absolute top-5 right-5 text-gray-400 hover:text-gray-700 text-xl cursor-pointer">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <h3 class="text-xl md:text-2xl font-bold text-[#1E293B] pr-8 mb-4">
+                SynapseHR експерти говорници на PowerToHR 4 во Приштина
+            </h3>
+            <div class="text-sm md:text-[15px] text-gray-600 font-light space-y-4 leading-relaxed max-h-[70vh] overflow-y-auto pr-2">
+                <p>SynapseHR со гордост информира дека четирите свои експерти беа говорници на регионалниот HR самит PowerToHR 4, кој се одржа во Приштина и обедини повеќе од 1.300 HR професионалци и експерти од сродни области.</p>
+                <p>PowerToHR 4 претставува една од најзначајните регионални платформи за HR заедницата, нудејќи инспиративни излагања од водечки индустриски лидери, панел дискусии, можности за вмрежување, како и пристап до најновите трендови и решенија преку специјална B2B зона и практични мастер класови.</p>
+                <p class="font-medium text-gray-800">Во рамки на програмата, SynapseHR експертите настапија со следните теми:</p>
+                <ul class="space-y-3 pl-1 mt-2 text-gray-700">
+                    <li class="flex items-start gap-2">
+                        <span class="font-bold text-[#5B52A3]">1.</span>
+                        <span><strong>Ивана Дојчиновска Стојановиќ</strong> – The rise of the Protean worker: Career agility &amp; self-directed growth in the era of Industry 5.0</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="font-bold text-[#5B52A3]">2.</span>
+                        <span><strong>Искра Конеска</strong> – AI in HR: Where technology ends and human power begins</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="font-bold text-[#5B52A3]">3.</span>
+                        <span><strong>Томида Караиванова Алагозовска</strong> – Predict or pay the price: The new role of HR</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="font-bold text-[#5B52A3]">4.</span>
+                        <span><strong>Ана Костовска</strong> – From vision to action: Strategic planning workshop for high-performing teams</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed inset-0 z-50 overflow-y-auto flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm" 
+         x-show="activeModal === 5" x-cloak x-transition>
+        <div class="bg-white rounded-[24px] max-w-2xl w-full p-6 md:p-8 relative shadow-2xl" @click.away="activeModal = null">
+            <button @click="activeModal = null" class="absolute top-5 right-5 text-gray-400 hover:text-gray-700 text-xl cursor-pointer">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <h3 class="text-xl md:text-2xl font-bold text-[#1E293B] pr-8 mb-4">
+                Flex Group Leadership Academy – развој на лидерство со предавачите од SynapseHR
+            </h3>
+            <div class="text-sm md:text-[15px] text-gray-600 font-light space-y-4 leading-relaxed max-h-[70vh] overflow-y-auto pr-2">
+                <p>Започна, Flex Group Leadership Academy - стратешка, долгорочна иницијатива на Секторот за човечки ресурси на Флекс Груп, насочена кон системско јакнење на лидерските и менаџерските капацитети низ целата организација.</p>
+                <p>Prudens Consulting и тимот на експерти од SynapseHR, ја дизајнираше Академијата како сеопфатна рамка за развој на менаџери, која се реализира преку структурирани програми и практични развојни модули. Целта е да се воспостават јасни, заеднички стандарди за водење, одговорност и менаџерско однесување во рамки на Групацијата.</p>
+                <p>Експертите на SynapseHR ги реализираат модулите, носејќи долгогодишно искуство од различни индустрии и реални бизнис ситуации. Преку практичен и интерактивен пристап, тие работат директно со менаџерите на развој на клучни вештини – донесување одлуки, управување со тимови, развој на луѓе и градење култура ориентирана кон резултати.</p>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<section data-aos="fade-up" class="w-full px-4 py-12 md:py-20 bg-[#F5F6F7]">
+    <div class="max-w-6xl mx-auto">
+        
+        <div class="relative overflow-hidden bg-gradient-to-r from-[#4F4697] via-[#577B94] to-[#6FA498] rounded-[24px] md:rounded-[36px] px-6 py-12 md:py-16 lg:py-20 text-center flex flex-col items-center justify-center shadow-xl shadow-indigo-950/5">
+            
+            <h2 class="text-white font-bold text-2xl sm:text-3xl md:text-4xl lg:text-[46px] leading-tight md:leading-[56px] max-w-3xl tracking-wide mb-6">
+                Ајде да градиме посилни <br class="hidden md:inline" /> тимови заедно
+            </h2>
+            
+            <p class="text-white/90 font-light text-sm md:text-[16px] leading-relaxed max-w-2xl mb-8 px-2 md:px-4">
+                Подготвени сте да ги развиете капацитетите на вашиот тим и организација? 
+                Закажете консултација и разговарајте со нас за вашите конкретни потреби.
+            </p>
+            
+            <a href="#" class="bg-[#54499C] hover:bg-[#433982] text-white font-normal text-sm md:text-[15px] px-8 py-3.5 rounded-xl transition-all duration-300 ease-in-out shadow-lg shadow-black/10 hover:scale-[1.03] active:scale-[0.98]">
+                Закажи средба
+            </a>
+            
+        </div>
+
+    </div>
+</section>
+
+  <section id="contact-section" data-aos="fade-right" class=" py-12 px-4">
             <div class="max-w-6xl mx-auto bg-white rounded-2xl p-8 shadow-sm relative overflow-hidden">
 
                 <div class="absolute top-0 left-0 right-0 h-2.5 pointer-events-none"
@@ -708,8 +929,8 @@
         </section>
 
 <!-- form -->
-<div data-aos="fade-left" class="min-h-screen flex items-center justify-center bg-[#f5f5f5] font-sans py-12 px-4 sm:px-6">
-    <div class="w-full max-w-[1132px] mx-auto bg-white rounded-[24px] md:rounded-[35px] p-6 sm:p-10 shadow-[0_3px_12px_#7AB5A866]">
+<section data-aos="fade-left" class="py-12 px-4">
+    <div class="max-w-6xl mx-auto bg-white rounded-2xl p-6 sm:p-10 shadow-[0_3px_12px_#7AB5A866]">
 
         <form action="{{ route('questions.store') }}" method="POST" class="w-full">
             @csrf
@@ -784,7 +1005,7 @@
         </form>
 
     </div>
-</div>
+</section>
 
 
 @endsection

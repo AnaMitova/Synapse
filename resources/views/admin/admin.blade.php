@@ -1,10 +1,9 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('content')
 <div class="min-h-screen bg-slate-50/60 px-4 py-10 mt-5 sm:px-6 lg:px-8">
     <div class="max-w-7xl mx-auto space-y-14">
 
-        <!-- CONTACTS SECTION -->
         <div class="space-y-4">
             <div class="flex items-center justify-between">
                 <div>
@@ -20,8 +19,9 @@
                         <thead class="bg-slate-50/70 border-b border-slate-200/60 text-slate-500 text-xs font-semibold uppercase tracking-wider">
                             <tr>
                                 <th scope="col" class="py-3.5 px-6">Име</th>
-                                <th scope="col" class="py-3.5 px-6">Е-пошта</th>
                                 <th scope="col" class="py-3.5 px-6">Компанија</th>
+                                <th scope="col" class="py-3.5 px-6">Е-пошта</th>
+                                <th scope="col" class="py-3.5 px-6">Телефон</th>
                                 <th scope="col" class="py-3.5 px-6">Датум</th>
                             </tr>
                         </thead>
@@ -36,10 +36,15 @@
                                             <span class="font-medium text-slate-900">{{ $contact->full_name }}</span>
                                         </div>
                                     </td>
-                                    <td class="py-4 px-6 text-slate-600 whitespace-nowrap">{{ $contact->email }}</td>
-                                    <td class="py-4 px-6 text-slate-500 max-w-xs sm:max-w-md">
-                                        <p class="truncate" title="{{ $contact->company }}">{{ $contact->company ?? '-' }}</p>
+                                    <td class="py-4 px-6 text-slate-600 whitespace-nowrap">
+                                        @if($contact->company)
+                                            <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-slate-100 text-slate-800 border border-slate-200/30">{{ $contact->company }}</span>
+                                        @else
+                                            <span class="text-slate-400">-</span>
+                                        @endif
                                     </td>
+                                    <td class="py-4 px-6 text-slate-600 whitespace-nowrap">{{ $contact->email }}</td>
+                                    <td class="py-4 px-6 text-slate-500 whitespace-nowrap">{{ $contact->phone ?? '-' }}</td>
                                     <td class="py-4 px-6 text-slate-500 whitespace-nowrap text-xs">
                                         <time class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-slate-100/80 text-slate-600 font-medium border border-slate-200/30">
                                             {{ $contact->created_at->format('d.m.Y H:i') }}
@@ -53,7 +58,6 @@
             </div>
         </div>
 
-        <!-- APPLICATIONS SECTION -->
         <div class="space-y-4">
             <div class="flex items-center justify-between">
                 <div>
@@ -114,7 +118,6 @@
             </div>
         </div>
 
-        <!-- QUESTIONS SECTION -->
         <div class="space-y-4">
             <div class="flex items-center justify-between">
                 <div>
