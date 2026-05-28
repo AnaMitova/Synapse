@@ -23,8 +23,7 @@
     </p>
     
     <div data-aos="fade-right" class="flex flex-col sm:flex-row gap-4 sm:gap-5 pt-8 md:pt-12 z-10 w-full sm:w-auto">
-        <a href="#" class="bg-[#5B52A3] text-center rounded-xl px-9 text-white py-3 md:py-2 transition-colors hover:bg-[#4a4386]">Контактирајте нѐ →</a>
-        <a href="#" class="border-2 text-center bg-white border-[#D1D5DC] rounded-xl px-4 py-3 md:py-2 text-[#101828] font-medium transition-colors hover:bg-gray-50">Пребарајте услуги</a>
+<a href="#contact-section" class="bg-[#5B52A3] text-center rounded-xl px-9 text-white py-3 md:py-2 transition-colors hover:bg-[#4a4386] inline-block">Контактирајте нѐ →</a>        <a href="#" class="border-2 text-center bg-white border-[#D1D5DC] rounded-xl px-4 py-3 md:py-2 text-[#101828] font-medium transition-colors hover:bg-gray-50">Пребарајте услуги</a>
     </div>
 
 </div>

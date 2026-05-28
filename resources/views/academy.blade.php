@@ -509,12 +509,13 @@
             <div class="bg-white border border-[#E2E8F0] px-6 py-6 rounded-xl font-medium text-[#101828] flex-1 text-center sm:text-left shadow-sm">
                 Практични решенија за секојдневни ситуации од производствена средина.
             </div>
-            <button class="bg-[#5B52A3] hover:bg-[#4f4794] text-white font-semibold px-8 py-4 rounded-xl flex items-center justify-center gap-2 transition-colors shadow-lg whitespace-nowrap">
-                Пријави се веднаш
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-            </button>
+          <a href="#registration-section" 
+   class="bg-[#5B52A3] hover:bg-[#4f4794] text-white font-semibold px-8 py-4 rounded-xl flex items-center justify-center gap-2 transition-colors shadow-lg whitespace-nowrap inline-flex">
+    Пријави се веднаш
+    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+    </svg>
+</a>
         </div>
         
     </div>
@@ -1087,14 +1088,13 @@
                     </div>
                 </div>
 
-                <button
-                    class="bg-white hover:bg-neutral-100 text-[#5B52A3] font-bold px-8 py-4 rounded-xl flex items-center justify-center gap-2 transition-colors shadow-lg">
-                    Пријавете се за следната група
-                    <svg class="w-4 h-4 text-[#5B52A3]" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                        stroke-width="2.5">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                    </svg>
-                </button>
+              <a href="#registration-section"
+   class="bg-white hover:bg-neutral-100 text-[#5B52A3] font-bold px-8 py-4 rounded-xl flex items-center justify-center gap-2 transition-colors shadow-lg inline-flex">
+    Пријавете се за следната група
+    <svg class="w-4 h-4 text-[#5B52A3]" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+    </svg>
+</a>
             </div>
         </section>
 
