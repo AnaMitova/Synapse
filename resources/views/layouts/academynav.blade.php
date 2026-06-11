@@ -18,7 +18,7 @@
             </div>
             
             <div class="hidden md:flex items-center text-xs lg:text-sm xl:text-[16px] text-[#364153] gap-3 lg:gap-6 xl:gap-10 whitespace-nowrap">
-                <a href="/home" class="hover:text-[#5B52A3] transition-colors duration-200">Почетна</a>
+                <a href="/" class="hover:text-[#5B52A3] transition-colors duration-200">Почетна</a>
                 <a href="#what-is-spm" class="hover:text-[#5B52A3] transition-colors duration-200 cursor-pointer">Што е SPM?</a>
                 <a href="#target-audience" class="hover:text-[#5B52A3] transition-colors duration-200 cursor-pointer">За кого е наменета?</a>
                 <a href="#spm-2026" class="hover:text-[#5B52A3] transition-colors duration-200 cursor-pointer">SMP 2026</a>
@@ -36,7 +36,7 @@
 
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute top-full left-0 w-full rounded-b-[25px] shadow-lg transition-all duration-300 ease-in-out">
             <div class="flex flex-col px-6 py-6 gap-4 text-[16px] text-[#364153] font-normal">
-                <a href="/home" class="py-2 border-b border-gray-50 hover:text-[#5B52A3]">Почетна</a>
+                <a href="/" class="py-2 border-b border-gray-50 hover:text-[#5B52A3]">Почетна</a>
                 <a href="#what-is-spm" class="py-2 border-b border-gray-50 hover:text-[#5B52A3] cursor-pointer">Што е SPM?</a>
                 <a href="#target-audience" class="py-2 border-b border-gray-50 hover:text-[#5B52A3] cursor-pointer">За кого е наменета?</a>
                 <a href="#spm-2026" class="py-2 border-b border-gray-50 hover:text-[#5B52A3] cursor-pointer">SMP 2026</a>

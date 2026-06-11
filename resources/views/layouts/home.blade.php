@@ -18,7 +18,7 @@
             </div>
             
             <div class="hidden lg:flex items-center text-[16px] text-[#364153] gap-8 xl:gap-14">
-                <a href="/home" class="hover:text-[#5B52A3] transition-colors duration-200">Почетна</a>
+                <a href="/" class="hover:text-[#5B52A3] transition-colors duration-200">Почетна</a>
                 <a href="#about-section" class="hover:text-[#5B52A3] transition-colors duration-200 cursor-pointer">За нас</a>
                 <a href="/academy" class="hover:text-[#5B52A3] transition-colors duration-200">Школа за менаџирање со луѓе</a>
                 <a href="#news-section" class="hover:text-[#5B52A3] transition-colors duration-200 cursor-pointer">Новости</a>
@@ -35,7 +35,7 @@
 
         <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 absolute top-full left-0 w-full rounded-b-[30px] shadow-lg transition-all duration-300 ease-in-out">
             <div class="flex flex-col px-8 py-6 gap-4 text-[16px] text-[#364153] font-normal">
-                <a href="/home" class="py-2 border-b border-gray-50 hover:text-[#5B52A3]">Почетна</a>
+                <a href="/" class="py-2 border-b border-gray-50 hover:text-[#5B52A3]">Почетна</a>
                 <a href="#about-section" class="py-2 border-b border-gray-50 hover:text-[#5B52A3] cursor-pointer">За нас</a>
                 <a href="/academy" class="py-2 border-b border-gray-50 hover:text-[#5B52A3]">Школа за менаџирање со луѓе</a>
                 <a href="#news-section" class="py-2 border-b border-gray-50 hover:text-[#5B52A3] cursor-pointer">Новости</a>
