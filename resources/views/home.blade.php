@@ -793,200 +793,91 @@
 
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
-    <section id="news-section" class="bg-[#F8FAFC] py-16 md:py-24 font-sans" x-data="{
-        activeModal: null,
-        items: [{
-                id: 1,
-                tag: 'НОВОСТИ',
-                title: 'SynapseHR експерти говорници на PowerToHR 4 во Приштина',
-                desc: 'Четири SynapseHR експерти настапија на регионалниот HR самит со преку 1.300 учесници, отворајќи клучни теми за иднината на работата и HR трансформацијата',
-                img: '/img/news1.jpg',
-                actionType: 'modal',
-                target: 1
-            },
-            {
-                id: 2,
-                tag: 'НОВОСТИ | РЕСУРСИ',
-                title: 'Скриените димензии на квалитетните работни места',
-                desc: 'Квалитетното работно место во вашата компанија не значи исто за секого и во секој фаза од неговата кариера. Секој вработен има различни очекувања од работата некој сака поголема автономија...',
-                img: '/img/news2.jpg',
-                actionType: 'link',
-                target: 'https://ekonomijaibiznis.mk/скриените-димензии-на-квалитетните-р/'
-            },
-            {
-                id: 3,
-                tag: 'НОВОСТИ | РЕСУРСИ',
-                title: 'Средниот раководен кадар – точката каде што стратегијата оживува или пропаѓа',
-                desc: 'Во практика, неподготвениот среден раководен кадар функционира како мултипликатор на ризик. Една лошо водена одлука ретко останува изолирана.',
-                img: '/img/news3.jpg',
-                actionType: 'link',
-                target: 'https://ekonomijaibiznis.mk/човечки-ресурси-томида-караиванова-а/?IdNews=48026'
-            },
-            {
-                id: 4,
-                tag: 'НОВОСТИ',
-                title: 'SynapseHR го најавува почетокот на Школата за менаџирање со луѓе/ School for People Management (SPM)',
-                desc: 'Специјално дизајнирана програма за развој на менаџерски и лидерски вештини, наменета за сите кои управуваат со луѓе',
-                img: '/img/academyLanding.png',
-                actionType: 'link',
-                target: '/academy'
-            },
-            {
-                id: 5,
-                tag: 'НОВОСТИ',
-                title: 'Flex Group Leadership Academy – развој на лидерство со предавачите од SynapseHR',
-                desc: 'Стратешка, долгорочна иницијатива на Секторот за човечки ресурси на Флекс Груп, насочена кон системско јакнење на лидерските и менаџерските капацитети',
-                img: '/img/news5.jpg',
-                actionType: 'modal',
-                target: 5
-            },
-            {
-                id: 6,
-                tag: 'НОВОСТИ',
-                title: 'Интервју за 24hr.mk - SYNAPSEHR: КОЛЕКТИВНА ЕКСПЕРТИЗА ЗА ЈАСНОСТ, ПЕРФОРМАНС И ОДРЖЛИВ РАСТ',
-                desc: 'Колективниот модел им дава на клиентите нешто што е реткост во консалтингот',
-                img: '/img/news6.jpg',
-                actionType: 'link',
-                target: 'https://24hr.mk/synapsehr-kolektivna-ekspertiza-za-jasnost-performans-i-odrzhliv-rast/'
-            }
-        ]
-    }">
+    <section class="py-12 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        
+        <p class="text-sm font-semibold tracking-wide text-indigo-600 uppercase">СОВЕТИ И НОВОСТИ</p>
+        <h2 class="mt-1 text-4xl font-extrabold text-gray-900 sm:text-5xl">Што е ново?</h2>
+        <h3 class="mt-2 text-3xl font-bold text-slate-500">
+            Што говорат експертите во <span class="text-teal-600">SynapseHR?</span>
+        </h3>
 
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mt-8 flex justify-center space-x-4">
+            <a href="{{ request()->fullUrlWithQuery(['filter' => 'newest']) }}" 
+               class="px-6 py-2 rounded-full text-sm font-medium transition shadow-sm 
+               {{ request('filter', 'newest') == 'newest' ? 'bg-white text-black border border-gray-200 font-semibold' : 'bg-gray-100 text-gray-600 hover:bg-gray-200' }}">
+                Најново
+            </a>
+            <a href="{{ request()->fullUrlWithQuery(['filter' => 'oldest']) }}" 
+               class="px-6 py-2 rounded-full text-sm font-medium transition shadow-sm 
+               {{ request('filter') == 'oldest' ? 'bg-white text-black border border-gray-200 font-semibold' : 'bg-gray-100 text-gray-600 hover:bg-gray-200' }}">
+                Најстаро
+            </a>
+            <a href="{{ request()->fullUrlWithQuery(['filter' => 'popular']) }}" 
+               class="px-6 py-2 rounded-full text-sm font-medium transition shadow-sm 
+               {{ request('filter') == 'popular' ? 'bg-white text-black border border-gray-200 font-semibold' : 'bg-gray-100 text-gray-600 hover:bg-gray-200' }}">
+                Најактуелно
+            </a>
+        </div>
 
-            <div class="text-center mb-12">
-                <span class="text-xs font-semibold tracking-widest text-[#5B52A3] uppercase block mb-2">Совети и
-                    новости</span>
-                <h2 class="text-3xl md:text-4xl font-extrabold text-[#1E293B] mb-3">Што е ново?</h2>
-                <h3 class="text-xl md:text-2xl font-medium text-[#4A5568]">
-                    Што говорат експертите во <span class="text-[#5BA3A1] font-bold">SynapseHR?</span>
-                </h3>
-            </div>
+        <div class="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3 text-left">
+            @forelse($events as $event)
+                <div class="flex flex-col rounded-3xl shadow-lg overflow-hidden bg-white border border-gray-100 transition duration-300 hover:shadow-xl">
+                    
+                    <div class="relative h-48 w-full bg-gray-200">
+                        @if($event->image)
+                            <img class="h-full w-full object-cover" src="{{ asset('storage/' . $event->image) }}" alt="{{ $event->title }}">
+                        @endif
+                        <span class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm text-xs font-bold tracking-wider text-gray-700 px-3 py-1 rounded-md uppercase">
+                            {{ $event->badge }}
+                        </span>
+                    </div>
 
-            <!-- Grid со картички (Сега директно лупира низ items) -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <template x-for="item in items" :key="item.id">
-                    <div
-                        class="bg-white rounded-[24px] shadow-sm hover:shadow-xl border border-gray-100 overflow-hidden flex flex-col justify-between transition-all duration-300 group">
-                        <div>
-                            <div class="relative h-56 w-full overflow-hidden bg-gray-100">
-                                <img :src="item.img" alt="News Image"
-                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                                <div
-                                    class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-md shadow-sm">
-                                    <span class="text-[10px] font-bold text-gray-700 tracking-wide uppercase"
-                                        x-text="item.tag"></span>
-                                </div>
-                            </div>
-
-                            <div class="p-6 md:p-7">
-                                <h4 class="text-lg font-bold text-[#1E293B] leading-snug mb-3 group-hover:text-[#5B52A3] transition-colors duration-200 min-h-[56px]"
-                                    x-text="item.title"></h4>
-                                <p class="text-sm font-light text-gray-500 leading-relaxed line-clamp-4 mb-4"
-                                    x-text="item.desc"></p>
-                            </div>
+                    <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+                        <div class="flex-1">
+                            <h4 class="text-xl font-bold text-gray-900 leading-snug">
+                                {{ $event->title }}
+                            </h4>
+                            <p class="mt-3 text-sm text-gray-500 line-clamp-3">
+                                {{ $event->description }}
+                            </p>
                         </div>
+                        <div class="mt-6">
+                           <div class="mt-6">
+    @if($event->action_type === 'external')
+        <a href="{{ $event->action_url }}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm font-semibold text-gray-700 hover:text-indigo-600 transition">
+            Прочитај повеќе 
+            <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+        </a>
 
-                        <!-- Акција копче (Модал или Линк) -->
-                        <div class="px-6 pb-7 pt-2">
-                            <template x-if="item.actionType === 'modal'">
-                                <button @click="activeModal = item.target"
-                                    class="text-xs font-semibold text-gray-600 hover:text-[#5B52A3] flex items-center gap-2 transition-colors cursor-pointer">
-                                    <span>Прочитај повеќе</span>
-                                    <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                                </button>
-                            </template>
-                            <template x-if="item.actionType === 'link'">
-                                <a :href="item.target" :target="item.target.startsWith('http') ? '_blank' : '_self'"
-                                    class="text-xs font-semibold text-gray-600 hover:text-[#5B52A3] inline-flex items-center gap-2 transition-colors">
-                                    <span>Прочитај повеќе</span>
-                                    <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                                </a>
-                            </template>
+    @elseif($event->action_type === 'modal')
+        <button type="button" 
+                onclick="openEventModal('{{ addslashes($event->title) }}', '{{ addslashes($event->description) }}')" 
+                class="inline-flex items-center text-sm font-semibold text-gray-700 hover:text-indigo-600 transition">
+            Прочитај повеќе 
+            <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"></path></svg>
+        </button>
+
+    @else
+        <a href="{{ route('events.show', $event->slug) }}" class="inline-flex items-center text-sm font-semibold text-gray-700 hover:text-indigo-600 transition">
+            Прочитај повеќе 
+            <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+        </a>
+    @endif
+</div>
                         </div>
                     </div>
-                </template>
-            </div>
-        </div>
 
-        <!-- Модал 1 -->
-        <div class="fixed inset-0 z-50 overflow-y-auto flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
-            x-show="activeModal === 1" x-cloak x-transition>
-            <div class="bg-white rounded-[24px] max-w-2xl w-full p-6 md:p-8 relative shadow-2xl"
-                @click.away="activeModal = null">
-                <button @click="activeModal = null"
-                    class="absolute top-5 right-5 text-gray-400 hover:text-gray-700 text-xl cursor-pointer">
-                    <i class="fa-solid fa-xmark"></i>
-                </button>
-                <h3 class="text-xl md:text-2xl font-bold text-[#1E293B] pr-8 mb-4">
-                    SynapseHR експерти говорници на PowerToHR 4 во Приштина
-                </h3>
-                <div
-                    class="text-sm md:text-[15px] text-gray-600 font-light space-y-4 leading-relaxed max-h-[70vh] overflow-y-auto pr-2">
-                    <p>SynapseHR со гордост информира дека четирите свои експерти беа говорници на регионалниот HR самит
-                        PowerToHR 4, кој се одржа во Приштина и обедини повеќе од 1.300 HR професионалци и експерти од
-                        сродни области.</p>
-                    <p>PowerToHR 4 претставува една од најзначајните регионални платформи за HR заедницата, нудејќи
-                        инспиративни излагања од водечки индустриски лидери, панел дискусии, можности за вмрежување, како и
-                        пристап до најновите трендови и решенија преку специјална B2B зона и практични мастер класови.</p>
-                    <p class="font-medium text-gray-800">Во рамки на програмата, SynapseHR експертите настапија со следните
-                        теми:</p>
-                    <ul class="space-y-3 pl-1 mt-2 text-gray-700">
-                        <li class="flex items-start gap-2">
-                            <span class="font-bold text-[#5B52A3]">1.</span>
-                            <span><strong>Ивана Дојчиновска Стојановиќ</strong> – The rise of the Protean worker: Career
-                                agility &amp; self-directed growth in the era of Industry 5.0</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <span class="font-bold text-[#5B52A3]">2.</span>
-                            <span><strong>Искра Конеска</strong> – AI in HR: Where technology ends and human power
-                                begins</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <span class="font-bold text-[#5B52A3]">3.</span>
-                            <span><strong>Томида Караиванова Алагозовска</strong> – Predict or pay the price: The new role
-                                of HR</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <span class="font-bold text-[#5B52A3]">4.</span>
-                            <span><strong>Ана Костовска</strong> – From vision to action: Strategic planning workshop for
-                                high-performing teams</span>
-                        </li>
-                    </ul>
                 </div>
-            </div>
-        </div>
-
-        <!-- Модал 5 -->
-        <div class="fixed inset-0 z-50 overflow-y-auto flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
-            x-show="activeModal === 5" x-cloak x-transition>
-            <div class="bg-white rounded-[24px] max-w-2xl w-full p-6 md:p-8 relative shadow-2xl"
-                @click.away="activeModal = null">
-                <button @click="activeModal = null"
-                    class="absolute top-5 right-5 text-gray-400 hover:text-gray-700 text-xl cursor-pointer">
-                    <i class="fa-solid fa-xmark"></i>
-                </button>
-                <h3 class="text-xl md:text-2xl font-bold text-[#1E293B] pr-8 mb-4">
-                    Flex Group Leadership Academy – развој на лидерство со предавачите од SynapseHR
-                </h3>
-                <div
-                    class="text-sm md:text-[15px] text-gray-600 font-light space-y-4 leading-relaxed max-h-[70vh] overflow-y-auto pr-2">
-                    <p>Започна, Flex Group Leadership Academy - стратешка, долгорочна иницијатива на Секторот за човечки
-                        ресурси на Флекс Груп, насочена кон системско јакнење на лидерските и менаџерските капацитети низ
-                        целата организација.</p>
-                    <p>Prudens Consulting и тимот на експерти од SynapseHR, ја дизајнираше Академијата како сеопфатна рамка
-                        за развој на менаџери, која се реализира преку структурирани програми и практични развојни модули.
-                        Целта е да се воспостават јасни, заеднички стандарди за водење, одговорност и менаџерско однесување
-                        во рамки на Групацијата.</p>
-                    <p>Експертите на SynapseHR ги реализираат модулите, носејќи долгогодишно искуство од различни индустрии
-                        и реални бизнис ситуации. Преку практичен и интерактивен пристап, тие работат директно со менаџерите
-                        на развој на клучни вештини – донесување одлуки, управување со тимови, развој на луѓе и градење
-                        култура ориентирана кон резултати.</p>
+            @empty
+                <div class="col-span-full text-center py-12 text-gray-500">
+                    Нема пронајдено содржини.
                 </div>
-            </div>
+            @endforelse
         </div>
 
-    </section>
+    </div>
+</section>
 
     <section data-aos="fade-up" class="w-full px-4 py-12 md:py-20 bg-[#F5F6F7]">
 
@@ -1177,4 +1068,40 @@
 
         </div>
     </section>
+    <div id="eventModal" class="fixed inset-0 z-50 hidden bg-gray-900 bg-opacity-50 overflow-y-auto h-full w-full" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div class="flex items-center justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:p-0">
+        
+        <div class="relative bg-white rounded-2xl text-left overflow-hidden shadow-2xl transform transition-all sm:my-8 sm:max-w-2xl w-full p-8">
+            
+            <button onclick="closeEventModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition">
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+            </button>
+
+            <h3 class="text-2xl font-bold text-gray-900 mb-4" id="modalTitle"></h3>
+            <div class="prose prose-sm sm:prose-base text-gray-600" id="modalDescription"></div>
+            
+            <div class="mt-8 text-right">
+                <button onclick="closeEventModal()" class="bg-indigo-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-indigo-700 transition">Затвори</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function openEventModal(title, description) {
+        document.getElementById('modalTitle').innerText = title;
+        // Using innerHTML here because your description is generated by a Rich Text Editor
+        document.getElementById('modalDescription').innerHTML = description; 
+        document.getElementById('eventModal').classList.remove('hidden');
+    }
+
+    function closeEventModal() {
+        document.getElementById('eventModal').classList.add('hidden');
+    }
+
+    // Close modal if clicking outside the white box
+    document.getElementById('eventModal').addEventListener('click', function(event) {
+        if (event.target === this) closeEventModal();
+    });
+</script>
 @endsection
