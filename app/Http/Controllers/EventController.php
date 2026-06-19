@@ -27,7 +27,7 @@ class EventController extends Controller
                 break;
         }
 
-        $events = $query->get();
+        $events = $query->paginate(9);
 
         // Use View::make instead of view() to make the editor happy
         return View::make('home', compact('events')); 
@@ -127,5 +127,12 @@ class EventController extends Controller
         $event->delete();
 
         return back()->with('success', 'Настанот е избришан!');
+    }
+    public function incrementViews(Event $event)
+    {
+        // Atomically increment the views column in the database
+        $event->increment('views');
+
+        return response()->json(['success' => true]);
     }
 }

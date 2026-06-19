@@ -92,5 +92,7 @@ Route::middleware('admin.password')->prefix('admin')->group(function () {
     Route::get('/events/{event}/edit', [EventController::class, 'edit'])->name('admin.events.edit');
     Route::put('/events/{event}', [EventController::class, 'update'])->name('admin.events.update');
     Route::delete('/events/{event}', [EventController::class, 'destroy'])->name('admin.events.destroy');
+    
 
 });
+Route::post('/events/{event}/increment-views', [App\Http\Controllers\EventController::class, 'incrementViews'])->name('events.increment-views');

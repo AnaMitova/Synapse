@@ -793,7 +793,7 @@
 
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
-    <section class="py-12 bg-gray-50">
+ <section id="events-section" class="py-12 bg-gray-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         
         <p class="text-sm font-semibold tracking-wide text-indigo-600 uppercase">СОВЕТИ И НОВОСТИ</p>
@@ -802,27 +802,19 @@
             Што говорат експертите во <span class="text-teal-600">SynapseHR?</span>
         </h3>
 
+        <!-- Filter Buttons -->
         <div class="mt-8 flex justify-center space-x-4">
-            <a href="{{ request()->fullUrlWithQuery(['filter' => 'newest']) }}" 
-               class="px-6 py-2 rounded-full text-sm font-medium transition shadow-sm 
-               {{ request('filter', 'newest') == 'newest' ? 'bg-white text-black border border-gray-200 font-semibold' : 'bg-gray-100 text-gray-600 hover:bg-gray-200' }}">
-                Најново
-            </a>
-            <a href="{{ request()->fullUrlWithQuery(['filter' => 'oldest']) }}" 
-               class="px-6 py-2 rounded-full text-sm font-medium transition shadow-sm 
-               {{ request('filter') == 'oldest' ? 'bg-white text-black border border-gray-200 font-semibold' : 'bg-gray-100 text-gray-600 hover:bg-gray-200' }}">
-                Најстаро
-            </a>
-            <a href="{{ request()->fullUrlWithQuery(['filter' => 'popular']) }}" 
-               class="px-6 py-2 rounded-full text-sm font-medium transition shadow-sm 
-               {{ request('filter') == 'popular' ? 'bg-white text-black border border-gray-200 font-semibold' : 'bg-gray-100 text-gray-600 hover:bg-gray-200' }}">
-                Најактуелно
-            </a>
+            <button onclick="sortEvents('date-desc')" data-type="date-desc" class="filter-btn px-6 py-2 rounded-full text-sm font-medium transition shadow-sm bg-white text-black border border-gray-200 font-semibold">Најново</button>
+            <button onclick="sortEvents('date-asc')" data-type="date-asc" class="filter-btn px-6 py-2 rounded-full text-sm font-medium transition shadow-sm bg-gray-100 text-gray-600 hover:bg-gray-200">Најстаро</button>
+            <button onclick="sortEvents('views-desc')" data-type="views-desc" class="filter-btn px-6 py-2 rounded-full text-sm font-medium transition shadow-sm bg-gray-100 text-gray-600 hover:bg-gray-200">Најактуелно</button>
         </div>
 
-        <div class="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3 text-left">
-            @forelse($events as $event)
-                <div class="flex flex-col rounded-3xl shadow-lg overflow-hidden bg-white border border-gray-100 transition duration-300 hover:shadow-xl">
+        <!-- Events Grid -->
+        <div id="events-grid" class="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3 text-left">
+            @foreach($events as $event)
+                <div class="event-card flex flex-col rounded-3xl shadow-lg overflow-hidden bg-white border border-gray-100 transition duration-300 hover:shadow-xl"
+                     data-date="{{ $event->created_at->timestamp }}" 
+                     data-views="{{ $event->views }}">
                     
                     <div class="relative h-48 w-full bg-gray-200">
                         @if($event->image)
@@ -835,49 +827,42 @@
 
                     <div class="flex-1 bg-white p-6 flex flex-col justify-between">
                         <div class="flex-1">
-                            <h4 class="text-xl font-bold text-gray-900 leading-snug">
-                                {{ $event->title }}
-                            </h4>
-                            <p class="mt-3 text-sm text-gray-500 line-clamp-3">
-                                {{ $event->description }}
-                            </p>
+                            <h4 class="text-xl font-bold text-gray-900 leading-snug">{{ $event->title }}</h4>
+                            <p class="mt-3 text-sm text-gray-500 line-clamp-3">{{ $event->description }}</p>
                         </div>
                         <div class="mt-6">
-                           <div class="mt-6">
-    @if($event->action_type === 'external')
-        <a href="{{ $event->action_url }}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm font-semibold text-gray-700 hover:text-indigo-600 transition">
-            Прочитај повеќе 
-            <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-        </a>
-
-    @elseif($event->action_type === 'modal')
-        <button type="button" 
-                onclick="openEventModal('{{ addslashes($event->title) }}', '{{ addslashes($event->description) }}')" 
-                class="inline-flex items-center text-sm font-semibold text-gray-700 hover:text-indigo-600 transition">
-            Прочитај повеќе 
-            <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"></path></svg>
-        </button>
-
-    @else
-        <a href="{{ route('events.show', $event->slug) }}" class="inline-flex items-center text-sm font-semibold text-gray-700 hover:text-indigo-600 transition">
-            Прочитај повеќе 
-            <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-        </a>
-    @endif
-</div>
+                            @if($event->action_type === 'external')
+                                <a href="{{ $event->action_url }}" target="_blank" rel="noopener noreferrer" onclick="trackView({{ $event->id }})" class="inline-flex items-center text-sm font-semibold text-gray-700 hover:text-indigo-600 transition">
+                                    Прочитај повеќе 
+                                </a>
+                            @elseif($event->action_type === 'modal')
+                                <button type="button" onclick="trackView({{ $event->id }}); openEventModal('{{ addslashes($event->title) }}', '{{ addslashes($event->description) }}')" class="inline-flex items-center text-sm font-semibold text-gray-700 hover:text-indigo-600 transition">
+                                    Прочитај повеќе 
+                                </button>
+                            @endif
                         </div>
                     </div>
-
                 </div>
-            @empty
-                <div class="col-span-full text-center py-12 text-gray-500">
-                    Нема пронајдено содржини.
-                </div>
-            @endforelse
+            @endforeach
         </div>
-
     </div>
 </section>
+
+<!-- Design-Matching Modal -->
+<div id="eventModal" class="fixed inset-0 z-50 hidden overflow-y-auto" role="dialog" aria-modal="true">
+    <div class="fixed inset-0 bg-gray-900/40 backdrop-blur-sm transition-opacity" onclick="closeEventModal()"></div>
+    <div class="flex min-h-screen items-center justify-center p-4">
+        <div class="relative bg-white rounded-xl shadow-2xl max-w-2xl w-full p-6 border-l-8 border-indigo-500 overflow-hidden">
+            <button onclick="closeEventModal()" class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 transition">
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+            <h3 class="text-xl font-bold text-gray-900 mb-4 pr-8" id="modalTitle"></h3>
+            <div class="prose prose-slate max-w-none text-gray-700 leading-relaxed" id="modalDescription"></div>
+        </div>
+    </div>
+</div>
 
     <section data-aos="fade-up" class="w-full px-4 py-12 md:py-20 bg-[#F5F6F7]">
 
@@ -1088,9 +1073,9 @@
 </div>
 
 <script>
+    // --- Modal Logic ---
     function openEventModal(title, description) {
         document.getElementById('modalTitle').innerText = title;
-        // Using innerHTML here because your description is generated by a Rich Text Editor
         document.getElementById('modalDescription').innerHTML = description; 
         document.getElementById('eventModal').classList.remove('hidden');
     }
@@ -1103,5 +1088,48 @@
     document.getElementById('eventModal').addEventListener('click', function(event) {
         if (event.target === this) closeEventModal();
     });
+
+    // --- Tracking Logic ---
+    function trackView(eventId) {
+        fetch(`/events/${eventId}/increment-views`, {
+            method: 'POST',
+            headers: {
+                'X-CSRF-TOKEN': '{{ csrf_token() }}',
+                'Content-Type': 'application/json'
+            }
+        }).catch(error => console.error('Error tracking view:', error));
+    }
+
+    // --- Sorting Logic ---
+    function sortEvents(type) {
+        const grid = document.getElementById('events-grid');
+        const cards = Array.from(document.getElementsByClassName('event-card'));
+
+        cards.sort((a, b) => {
+            if (type === 'date-desc') return b.dataset.date - a.dataset.date;
+            if (type === 'date-asc') return a.dataset.date - b.dataset.date;
+            if (type === 'views-desc') return b.dataset.views - a.dataset.views;
+            return 0;
+        });
+
+        cards.forEach(card => grid.appendChild(card));
+        
+        // Optional: Update button styles to reflect active filter
+        updateButtonStyles(type);
+    }
+
+    function updateButtonStyles(activeType) {
+        // Find all buttons in the filter container
+        const buttons = document.querySelectorAll('.filter-btn');
+        buttons.forEach(btn => {
+            if (btn.getAttribute('data-type') === activeType) {
+                btn.classList.add('bg-white', 'text-black', 'border-gray-200', 'font-semibold');
+                btn.classList.remove('bg-gray-100', 'text-gray-600');
+            } else {
+                btn.classList.remove('bg-white', 'text-black', 'border-gray-200', 'font-semibold');
+                btn.classList.add('bg-gray-100', 'text-gray-600');
+            }
+        });
+    }
 </script>
 @endsection
